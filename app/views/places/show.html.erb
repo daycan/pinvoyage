@@ -1,0 +1,12 @@
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="places show">
+	<h2><%= @place.name %></h2>
+	<p><%= @place.location_type %></p>
+	<p>Lat: <%= @place.latitude %></p>
+	<p>Long: <%= @place.longitude %></p>
+	<p>Country code: <%= @place.country_code %></p>
+
+</div>
+
+

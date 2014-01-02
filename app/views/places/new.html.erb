@@ -1,0 +1,40 @@
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="places new">
+	<h2>Create Place</h2>
+
+	<%= form_for(:place, :url => {:action => 'create'}) do |f| %>
+
+	<table summary="Place form fields">
+		<tr>
+			<th>Name</th>
+			<td><%= f.text_field(:name) %></td>
+		</tr>
+		<tr>
+			<th>Type</th>
+			<td><%= f.text_field(:location_type) %></td>
+		</tr>
+		<tr>
+			<th>Latitude</th>
+			<td><%= f.text_field(:latitude) %></td>
+		</tr>
+		<tr>
+			<th>Longitude</th>
+			<td><%= f.text_field(:longitude) %></td>
+		</tr>
+		<tr>
+			<th>Zip</th>
+			<td><%= f.text_field(:zip_code) %></td>
+		</tr>
+		<tr>
+			<th>Country Code</th>
+			<td><%= f.text_field(:country_code) %></td>
+		</tr>
+	</table>
+
+	<div class="form-buttons">
+		<%= submit_tag("Create Place") %>
+	</div>
+
+	<% end %>
+</div>

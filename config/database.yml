@@ -13,8 +13,8 @@ development:
   encoding: utf8
   database: pinvoyage_development
   pool: 5
-  username: root
-  password:
+  username: pinvoyage
+  password: ghettopass
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -35,5 +35,5 @@ production:
   database: pinvoyage_production
   pool: 5
   username: root
-  password:
+  password: 
   socket: /tmp/mysql.sock

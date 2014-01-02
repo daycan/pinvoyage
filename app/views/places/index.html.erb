@@ -1,0 +1,29 @@
+<div class="places index">
+	<h2>Places</h2>
+
+	<%= link_to("Add New Place", {:action => 'new'}, :class => 'action new') %>
+
+	<table class="listing" summary="Place list">
+		<tr class="header">
+			<th>&nbsp;</th>
+			<th>Name</th>
+			<th>Zip</th>
+			<th>Type</th>
+			<th>Actions</th>
+		</tr>
+		<% @places.each do |place| %>
+		<tr>
+			<td><%= place.id %></td>
+			<td><%= place.name %></td>
+			<td><%= place.zip_code %></td>
+			<td><%= place.location_type %></td>
+			<td class="actions">
+				<%= link_to("Show", {:action => 'show', :id => place.id}, :class => 'action show') %>
+				<%= link_to("Edit", '#', :class => 'action edit') %>
+				<%= link_to("Delete", '#', :class => 'action delete') %>
+			</td>
+		</tr>
+		<% end %>
+	</table>
+</div>
+
