@@ -1,3 +1,10 @@
+<% if !flash[:notice].blank? %>
+	<div class="notice">
+		<%= flash[:notice] %>
+	</div>
+<% end %>
+
+
 <div class="places index">
 	<h2>Places</h2>
 
@@ -19,8 +26,8 @@
 			<td><%= place.location_type %></td>
 			<td class="actions">
 				<%= link_to("Show", {:action => 'show', :id => place.id}, :class => 'action show') %>
-				<%= link_to("Edit", '#', :class => 'action edit') %>
-				<%= link_to("Delete", '#', :class => 'action delete') %>
+				<%= link_to("Edit", {:action => 'edit', :id => place.id}, :class => 'action edit') %>
+				<%= link_to("Delete", {:action => 'delete', :id => place.id}, :class => 'action delete') %>
 			</td>
 		</tr>
 		<% end %>

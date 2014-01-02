@@ -18,6 +18,7 @@ class PlacesController < ApplicationController
     @place = Place.new(place_params)
     # Save the object
     if @place.save
+      flash[:notice] = "'#{@place.name}' created successfully."
       redirect_to(:action => 'index')
     else
       # If save, fails, redisplay the form so the user can fix problems
@@ -25,12 +26,33 @@ class PlacesController < ApplicationController
     end
   end
 
-
   def edit
+    @place = Place.find(params[:id])
+  end
+
+  def update
+    # Find an existing object using form paramters
+    @place = Place.find(params[:id])
+    # Update the object
+    if @place.update_attributes(place_params)
+      flash[:notice] = "'#{@place.name}' updated successfully."
+      redirect_to(:action => 'show', :id => @place.id)
+    else
+      # If update, fails, redisplay the form so the user can fix problems
+      render('edit')
+    end
   end
 
   def delete
+    @place = Place.find(params[:id])
   end
+
+  def destroy
+    place = Place.find(params[:id]).destroy
+    flash[:notice] = "'#{place.name}' destroyed successfully."
+    redirect_to(:action => 'index')
+  end
+
 
   private
 

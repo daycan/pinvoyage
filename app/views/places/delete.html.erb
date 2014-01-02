@@ -1,2 +1,18 @@
-<h1>Places#delete</h1>
-<p>Find me in app/views/places/delete.html.erb</p>
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="places delete">
+	<h2>Delete Place</h2>
+
+	<%= form_for(:place, :url => {:action => 'destroy', :id => @place.id}) do |f|%>
+
+		<p>Are you sure you want to permanently delete this place?</p>
+
+		<p class="reference-name"><%= @place.name %></p>
+
+		<div class="form-buttons">
+			<%= submit_tag("Delete Place") %>
+		</div>
+
+	<% end %>
+</div>
+
