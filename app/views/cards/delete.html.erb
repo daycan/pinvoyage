@@ -1,0 +1,17 @@
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="pin delete">
+	<h2>Delete Pin</h2>
+
+	<%= form_for(:card, :url => {:action => 'destroy', :id => @card.id}) do |f|%>
+
+		<p>Are you sure you want to permanently delete this pin?</p>
+
+		<p class="reference-name"><%= @card.id %></p>
+
+		<div class="form-buttons">
+			<%= submit_tag("Delete Pin") %>
+		</div>
+
+	<% end %>
+</div>

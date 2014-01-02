@@ -1,0 +1,24 @@
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="card new">
+	<h2>Create a new Pin</h2>
+
+	<%= form_for(:card, :url => {:action => 'create'}) do |f| %>
+
+	<table summary="Card form fields">
+		<tr>
+			<th>Place ID</th>
+			<td><%= f.text_field(:place_id) %></td>
+		</tr>
+		<tr>
+			<th>Text</th>
+			<td><%= f.text_field(:text) %></td>
+		</tr>
+	</table>
+
+	<div class="form-buttons">
+		<%= submit_tag("Create Card") %>
+	</div>
+
+	<% end %>
+</div>
