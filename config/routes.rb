@@ -1,6 +1,6 @@
 Pinvoyage::Application.routes.draw do
   
-  root "places#index"
+  root "cards#index"
 
   match ':controller(/:action(/:id))', :via => [:get, :post]
   # The priority is based upon order of creation: first created -> highest priority.

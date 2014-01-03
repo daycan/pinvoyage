@@ -1,6 +1,6 @@
 class PlacesController < ApplicationController
   
-  layout false
+  layout "admin"
 
   def index
     @places = Place.sorted

@@ -1,3 +1,5 @@
+<% @page_title = "Create New Pin" %>
+
 <%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
 
 <div class="card new">
@@ -5,16 +7,7 @@
 
 	<%= form_for(:card, :url => {:action => 'create'}) do |f| %>
 
-	<table summary="Card form fields">
-		<tr>
-			<th>Place ID</th>
-			<td><%= f.text_field(:place_id) %></td>
-		</tr>
-		<tr>
-			<th>Text</th>
-			<td><%= f.text_field(:text) %></td>
-		</tr>
-	</table>
+		<%= render(:partial => "form", :locals => {:f => f}) %>
 
 	<div class="form-buttons">
 		<%= submit_tag("Create Card") %>

@@ -1,5 +1,7 @@
 class CardsController < ApplicationController
   
+  layout "application"
+
   def index
     @cards = Card.newest_first
   end

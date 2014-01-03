@@ -1,13 +1,10 @@
-<% if !flash[:notice].blank? %>
-	<div class="notice">
-		<%= flash[:notice] %>
-	</div>
-<% end %>
+<% @page_title = "Pin Details" %>
 
 <%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
 
 <div class="cards  show">
-	<h2>Card id: <%= @card.id %></h2>
+	<h2><%= @card.place.name %></h2>
+	<p><%= @card.place.location_type %></p>
 	<p><%= @card.text %></p>
 
 </div>

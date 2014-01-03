@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Pinvoyage</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+	  <title>PinVoyage</title>
+	</head>
+	<body>
+		<% if !flash[:notice].blank? %>
+			<div class="notice">
+				<%= flash[:notice] %>
+			</div>
+		<% end %>
 
-<%= yield %>
+		<!-- before yield -->
+		<%= yield %>
+		<!-- after yield -->
 
-</body>
+		<div id="footer">
+			<p id="copyright">&copy; pinvoyage.com </p>
+		</div>
+	</body>
 </html>

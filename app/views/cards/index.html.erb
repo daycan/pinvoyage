@@ -1,9 +1,4 @@
-<% if !flash[:notice].blank? %>
-	<div class="notice">
-		<%= flash[:notice] %>
-	</div>
-<% end %>
-
+<% @page_title = "Pins" %>
 
 <div class="cards index">
 
@@ -18,17 +13,17 @@
 			<th>Actions</th>
 		</tr>
 		<% @cards.each do |card| %>
-		<tr>
-			<td><%= card.place_id %></td>
-			<td></td>
-			<td></td>
-			<td><%= card.text %></td>
-			<td class="actions">
-				<%= link_to("Show", {:action => 'show', :id => card.id}, :class => 'action show') %>
-				<%= link_to("Edit", {:action => 'edit', :id => card.id}, :class => 'action edit') %>
-				<%= link_to("Delete", {:action => 'delete', :id => card.id}, :class => 'action delete') %>
-			</td>
-		</tr>
+			<tr>
+				<td><%= card.place_id %></td>
+				<td><%= card.place.name %></td>
+				<td><%= card.place.location_type %></td>
+				<td><%= card.text %></td>
+				<td class="actions">
+					<%= link_to("Show", {:action => 'show', :id => card.id}, :class => 'action show') %>
+					<%= link_to("Edit", {:action => 'edit', :id => card.id}, :class => 'action edit') %>
+					<%= link_to("Delete", {:action => 'delete', :id => card.id}, :class => 'action delete') %>
+				</td>
+			</tr>
 		<% end %>
 	</table>
 </div>
