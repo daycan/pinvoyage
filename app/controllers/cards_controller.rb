@@ -2,6 +2,8 @@ class CardsController < ApplicationController
   
   layout "application"
 
+  before_action :confirm_logged_in
+
   def index
     @cards = Card.newest_first
   end

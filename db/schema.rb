@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140102013821) do
+ActiveRecord::Schema.define(version: 20140104014121) do
 
   create_table "cards", force: true do |t|
     t.integer  "place_id"
@@ -47,13 +47,13 @@ ActiveRecord::Schema.define(version: 20140102013821) do
   add_index "places", ["name"], name: "index_places_on_name", using: :btree
 
   create_table "users", force: true do |t|
-    t.string   "first_name", limit: 25
-    t.string   "last_name",  limit: 50
-    t.string   "email",                 default: "", null: false
-    t.string   "username",   limit: 25
-    t.string   "password",   limit: 40
+    t.string   "first_name",      limit: 25
+    t.string   "last_name",       limit: 50
+    t.string   "email",                      default: "", null: false
+    t.string   "username",        limit: 25
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password_digest"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", using: :btree

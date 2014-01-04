@@ -1,6 +1,8 @@
 class PlacesController < ApplicationController
   
-  layout "admin"
+  layout "application"
+
+  before_action :confirm_logged_in
 
   def index
     @places = Place.sorted

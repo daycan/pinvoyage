@@ -1,10 +1,14 @@
-<% @page_title = "Pins" %>
+<% title "Pins" %>
 
 <div class="cards index">
 
-	<%= link_to("Create new pin", {:action => 'new'}, :class => 'action new') %>
+	<div class="span12 pagination-centered">
+		<%= image_tag('script_logo_noback.png', :size => '223x107', :alt => '<h1>PinVoyage</h1>') %>
+		<br>
+		<%= link_to("Add Pin", {:action => 'new'}, :class => 'btn') %>
+	</div>
 
-	<table class="listing" summary="Card list">
+	<table class="table" summary="Card list">
 		<tr class="header">
 			<th>&nbsp;</th>
 			<th>Name</th>
@@ -19,9 +23,9 @@
 				<td><%= card.place.location_type %></td>
 				<td><%= card.text %></td>
 				<td class="actions">
-					<%= link_to("Show", {:action => 'show', :id => card.id}, :class => 'action show') %>
-					<%= link_to("Edit", {:action => 'edit', :id => card.id}, :class => 'action edit') %>
-					<%= link_to("Delete", {:action => 'delete', :id => card.id}, :class => 'action delete') %>
+					<%= link_to("Show", {:action => 'show', :id => card.id}, :class => 'btn btn-small') %>
+					<%= link_to("Edit", {:action => 'edit', :id => card.id}, :class => 'btn btn-small') %>
+					<%= link_to("Delete", {:action => 'delete', :id => card.id}, :class => 'btn btn-small btn-danger') %>
 				</td>
 			</tr>
 		<% end %>
