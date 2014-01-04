@@ -1,6 +1,5 @@
 Pinvoyage::Application.routes.draw do
   
-  
   root "cards#index"
 
   get "access/index"
