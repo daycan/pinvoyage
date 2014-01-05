@@ -1,35 +1,23 @@
 
-	<table summary="Place form fields">
+	<table summary="Place and Card form fields">
 		<tr>
 			<th>Name</th>
-			<td><%= f.text_field(:name) %></td>
+			<td><%= text_field(:place, :name) %></td>
 		</tr>
 		<tr>
 			<th>Type</th>
-			<td><%= f.text_field(:location_type) %></td>
+			<td><%= text_field(:place, :location_type) %></td>
 		</tr>
 		<tr>
 			<th>City</th>
-			<td><%= f.text_field(:city) %></td>
+			<td><%= text_field(:place, :city) %></td>
 		</tr>
 		<tr>
 			<th>Country</th>
-			<td><%= f.text_field(:country) %></td>
+			<td><%= text_field(:place, :country) %></td>
 		</tr>
 		<tr>
 			<th>Description</th>
-			<td><%= f.text_field(:text) %></td>
+			<td><%= text_field(:card, :text) %></td>
 		</tr>
 	</table>
-
-<!-- This is how you create a form where you define the object per field
-		Note: need to remove '#'s to make it work
-	<%= form_tag(#:action => 'create') do %>
-		<%= text_field(#:place, #:name) %>
-		<%= text_field(#:card, #:name) %>
-		...
-		<%= submit_tag(#"Create Subject") %>
-
-	<% #end %>
--->
-

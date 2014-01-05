@@ -23,7 +23,7 @@ class Place < ActiveRecord::Base
 	}	
 
 	def full_street_address
-		"#{name}, #{city}, #{country}"
+		name + ", " + city + ", " + country
 	end
 
 end

@@ -5,9 +5,9 @@
 <div class="place new">
 	<h2>Create a new Pin</h2>
 
-	<%= form_for(:place, :url => {:action => 'check_exists'}) do |f| %>
+	<%= form_tag(:action => 'check_exists') do %>
 
-		<%= render(:partial => "form", :layout => false, :locals => {:f => f}) %>
+		<%= render(:partial => "form") %>
 
 		<div class="form-buttons">
 			<%= submit_tag("Create Pin") %>
@@ -16,3 +16,4 @@
 	<% end %>
 
 </div>
+

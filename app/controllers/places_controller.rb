@@ -86,7 +86,7 @@ class PlacesController < ApplicationController
     end
 
     def card_params
-      params.require(:place).permit(:text, :place_id)
+      params.require(:card).permit(:text)
     end
 
 
