@@ -22,28 +22,21 @@ class PlacesController < ApplicationController
     @card = Card.new(card_params)
     #@place.temp_card_text = params[temp_card_text]
     #@card = Card.new
-    if Place.where(:name => @place.name, :city => @place.city, :country => @place.country).blank?
-      if @place.save
-        flash[:notice] = "'#{@place.name}' created successfully."
-
-      else
-        # If save, fails, redisplay the form so the user can fix problems
-        render('new')
-      end
-    else
-      flash[:notice] = "Adding pin to existing place"
-      @place = Place.find_by(name: @place.name, city: @place.city, country: @place.country)
+    @place_exist = Place.where(:name => @place.name, :city => @place.city, :country => @place.country)
+    if !@place_exist.blank?
+      @place = @place_exist
     end
-    @card.place_id = @place.id
-    #@card.text = "temporary text until this shit starts working"
-    @card.save
 
-    #session[:my_key] = 'my value'
-
-    #Then access it in another controller by simply calling session[:my_key]
-    #:temp_card_text => params[:temp_card_text]
-    #redirect_to(:controller => 'cards', :action => 'create', :place_id => :id, :text => @place.temp_card_text)
-    redirect_to(:controller => 'cards', :action => 'index', :place_id => @place.id)
+    if @place.save
+      flash[:notice] = "'#{@place.name}' created successfully."
+      @card.place_id = @place.id
+      @card.save
+      redirect_to(:controller => 'cards', :action => 'index')
+    else
+      # If save, fails, redisplay the form so the user can fix problems
+      render('new')
+    end
+    
   end
 
 

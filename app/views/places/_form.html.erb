@@ -6,7 +6,12 @@
 		</tr>
 		<tr>
 			<th>Type</th>
-			<td><%= text_field(:place, :location_type) %></td>
+			<td>
+				<%= radio_button(:place, :location_type, 'restaurant') %> Restaurant
+				<%= radio_button(:place, :location_type, 'bar') %> Bar
+				<%= radio_button(:place, :location_type, 'site') %> Site
+				<%= radio_button(:place, :location_type, 'activity') %> Activity
+			</td>
 		</tr>
 		<tr>
 			<th>City</th>
@@ -18,6 +23,6 @@
 		</tr>
 		<tr>
 			<th>Description</th>
-			<td><%= text_field(:card, :text) %></td>
+			<td><%= text_area(:card, :text, :size => "10x5") %></td>
 		</tr>
 	</table>

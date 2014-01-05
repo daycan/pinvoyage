@@ -2,6 +2,9 @@ class Place < ActiveRecord::Base
 
 	has_many :cards
 	accepts_nested_attributes_for :cards
+	
+	validates_presence_of :country
+
 	attr_accessor :text
 
 	#geocoder configuration
