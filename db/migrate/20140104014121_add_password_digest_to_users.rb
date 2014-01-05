@@ -9,7 +9,4 @@ class AddPasswordDigestToUsers < ActiveRecord::Migration
   	remove_column "users", "password_digest"
   end
 
-
-
-
 end

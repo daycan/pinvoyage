@@ -13,20 +13,40 @@ class PlacesController < ApplicationController
   end
 
   def new
+    @card = Card.new
     @place = Place.new
   end
 
-  def create
+  def check_exists
     @place = Place.new(place_params)
-    # Save the object
-    if @place.save
-      flash[:notice] = "'#{@place.name}' created successfully."
-      redirect_to(:action => 'index')
+    @card = Card.new(card_params)
+    #@place.temp_card_text = params[temp_card_text]
+    #@card = Card.new
+    if Place.where(:name => @place.name, :city => @place.city, :country => @place.country).blank?
+      if @place.save
+        flash[:notice] = "'#{@place.name}' created successfully."
+
+      else
+        # If save, fails, redisplay the form so the user can fix problems
+        render('new')
+      end
     else
-      # If save, fails, redisplay the form so the user can fix problems
-      render('new')
+      flash[:notice] = "Adding pin to existing place"
+      @place = Place.find_by(name: @place.name, city: @place.city, country: @place.country)
     end
+    @card.place_id = @place.id
+    #@card.text = "temporary text until this shit starts working"
+    @card.save
+
+    #session[:my_key] = 'my value'
+
+    #Then access it in another controller by simply calling session[:my_key]
+    #:temp_card_text => params[:temp_card_text]
+    #redirect_to(:controller => 'cards', :action => 'create', :place_id => :id, :text => @place.temp_card_text)
+    redirect_to(:controller => 'cards', :action => 'index', :place_id => @place.id)
   end
+
+
 
   def edit
     @place = Place.find(params[:id])
@@ -62,7 +82,11 @@ class PlacesController < ApplicationController
       # same as using "params[:place]", except that it:
       # - raises an error if :place is not present
       # - allows listed attributes to be mass-assigned
-      params.require(:place).permit(:name, :zip_code, :location_type, :latitude, :longitude, :country_code)
+      params.require(:place).permit(:name, :location_type, :city, :country)
+    end
+
+    def card_params
+      params.require(:place).permit(:text, :place_id)
     end
 
 

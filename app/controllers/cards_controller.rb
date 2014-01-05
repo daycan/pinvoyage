@@ -3,6 +3,7 @@ class CardsController < ApplicationController
   layout "application"
 
   before_action :confirm_logged_in
+  before_action :find_place
 
   def index
     @cards = Card.newest_first
@@ -13,18 +14,11 @@ class CardsController < ApplicationController
   end
 
   def new
-    @card = Card.new
+    # This is handled by the 'place' controller via the 'new' and 'check_exist' actions
   end
 
   def create
-    @card = Card.new(card_params)
-    if @card.save
-      flash[:notice] = "Card saved successfully"
-      redirect_to(:action => 'index')
-    else
-      render('mew')
-    end
-
+    # This is handled by the 'place' controller via the 'new' and 'check_exist' actions
   end
 
   def edit
@@ -58,6 +52,12 @@ class CardsController < ApplicationController
 
     def card_params
       params.require(:card).permit(:place_id, :text)
+    end
+
+    def find_place
+      if params[:place_id]
+        @place = Place.find(params[:place_id])
+      end
     end
 
 end

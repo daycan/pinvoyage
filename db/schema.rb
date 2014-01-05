@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140104014121) do
+ActiveRecord::Schema.define(version: 20140105011633) do
 
   create_table "cards", force: true do |t|
     t.integer  "place_id"
@@ -33,17 +33,16 @@ ActiveRecord::Schema.define(version: 20140104014121) do
   add_index "pins", ["card_id", "user_id"], name: "index_pins_on_card_id_and_user_id", using: :btree
 
   create_table "places", force: true do |t|
-    t.string   "zip_code",                                                         null: false
     t.string   "name",          limit: 50
     t.string   "location_type"
-    t.decimal  "latitude",                 precision: 15, scale: 10, default: 0.0
-    t.decimal  "longitude",                precision: 15, scale: 10, default: 0.0
-    t.string   "country_code"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "latitude",                 default: 0.0
+    t.float    "longitude",                default: 0.0
+    t.string   "city",          limit: 40
+    t.string   "country",       limit: 40
   end
 
-  add_index "places", ["country_code"], name: "index_places_on_country_code", using: :btree
   add_index "places", ["name"], name: "index_places_on_name", using: :btree
 
   create_table "users", force: true do |t|

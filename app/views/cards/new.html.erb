@@ -2,16 +2,5 @@
 
 <%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
 
-<div class="card new">
-	<h2>Create a new Pin</h2>
+	<h2>Warning: Create new pins via Place actions 'New' and 'Check Exist'</h2>
 
-	<%= form_for(:card, :url => {:action => 'create'}) do |f| %>
-
-		<%= render(:partial => "form", :locals => {:f => f}) %>
-
-	<div class="form-buttons">
-		<%= submit_tag("Create Card") %>
-	</div>
-
-	<% end %>
-</div>

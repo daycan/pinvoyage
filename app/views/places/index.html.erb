@@ -9,7 +9,10 @@
 		<tr class="header">
 			<th>&nbsp;</th>
 			<th>Name</th>
-			<th>Zip</th>
+			<th>City</th>
+			<th>Country</th>
+			<th>Latitude</th>
+			<th>Longitude</th>
 			<th>Type</th>
 			<th>Actions</th>
 		</tr>
@@ -17,7 +20,10 @@
 		<tr>
 			<td><%= place.id %></td>
 			<td><%= place.name %></td>
-			<td><%= place.zip_code %></td>
+			<td><%= place.city %></td>
+			<td><%= place.country %></td>
+			<td><%= place.latitude %></td>
+			<td><%= place.longitude %></td>
 			<td><%= place.location_type %></td>
 			<td class="actions">
 				<%= link_to("Show", {:action => 'show', :id => place.id}, :class => 'action show') %>

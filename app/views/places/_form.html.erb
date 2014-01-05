@@ -9,19 +9,27 @@
 			<td><%= f.text_field(:location_type) %></td>
 		</tr>
 		<tr>
-			<th>Latitude</th>
-			<td><%= f.text_field(:latitude) %></td>
+			<th>City</th>
+			<td><%= f.text_field(:city) %></td>
 		</tr>
 		<tr>
-			<th>Longitude</th>
-			<td><%= f.text_field(:longitude) %></td>
+			<th>Country</th>
+			<td><%= f.text_field(:country) %></td>
 		</tr>
 		<tr>
-			<th>Zip</th>
-			<td><%= f.text_field(:zip_code) %></td>
-		</tr>
-		<tr>
-			<th>Country Code</th>
-			<td><%= f.text_field(:country_code) %></td>
+			<th>Description</th>
+			<td><%= f.text_field(:text) %></td>
 		</tr>
 	</table>
+
+<!-- This is how you create a form where you define the object per field
+		Note: need to remove '#'s to make it work
+	<%= form_tag(#:action => 'create') do %>
+		<%= text_field(#:place, #:name) %>
+		<%= text_field(#:card, #:name) %>
+		...
+		<%= submit_tag(#"Create Subject") %>
+
+	<% #end %>
+-->
+

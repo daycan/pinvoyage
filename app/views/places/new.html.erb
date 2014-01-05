@@ -1,16 +1,18 @@
-<% title "Create New Places" %>
+<% title "Create New Pin" %>
 
-<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+<%= link_to("<< Back to List", {:action => 'card/index'}, :class => 'back-link') %>
 
-<div class="places new">
-	<h2>Create Place</h2>
+<div class="place new">
+	<h2>Create a new Pin</h2>
 
-	<%= form_for(:place, :url => {:action => 'create'}) do |f| %>
-		<%= render(:partial => "form", :locals => {:f => f}) %>
+	<%= form_for(:place, :url => {:action => 'check_exists'}) do |f| %>
+
+		<%= render(:partial => "form", :layout => false, :locals => {:f => f}) %>
 
 		<div class="form-buttons">
-			<%= submit_tag("Create Place") %>
+			<%= submit_tag("Create Pin") %>
 		</div>
 
 	<% end %>
+
 </div>
