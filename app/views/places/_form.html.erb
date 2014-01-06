@@ -2,27 +2,35 @@
 
 <form summary="Place and Card form fields">
 	<div>
-		<%= label(:place, :name) %>
-		<%= text_field(:place, :name) %>
+		<%= f.label(:name) %>
+		<%= f.text_field(:name) %>
 	</div>
 	<div>
-		<%= label(:place, :location_type, "Type") %>
+		<%= f.label(:location_type, "Type") %>
 		
-			<%= radio_button(:place, :location_type, 'restaurant') %> Restaurant
-			<%= radio_button(:place, :location_type, 'bar') %> Bar
-			<%= radio_button(:place, :location_type, 'site') %> Site
-			<%= radio_button(:place, :location_type, 'activity') %> Activity
+			<%= f.radio_button(:location_type, 'restaurant') %> Restaurant
+			<%= f.radio_button(:location_type, 'bar') %> Bar
+			<%= f.radio_button(:location_type, 'site') %> Site
+			<%= f.radio_button(:location_type, 'activity') %> Activity
+	</div>
+	<br>
+	<div>
+		<%= f.label(:city) %>
+		<%= f.text_field(:city) %>
 	</div>
 	<div>
-		<%= label(:place, :city) %>
-		<%= text_field(:place, :city) %>
+		<%= f.label(:country) %>
+		<%= f.text_field(:country) %>
 	</div>
-	<div>
-		<%= label(:place, :country) %>
-		<%= text_field(:place, :country) %>
-	</div>
-	<div>
-		<%= label(:card, :text, "Description") %>
-		<%= text_area(:card, :text, :size => "10x5") %>
-	</div>
+
+	<%= f.fields_for(:card) do |card_form| %>
+		<div>
+			<%= card_form.label(:text, "Description") %>
+			<%= card_form.text_area(:text, :size => "10x5") %>
+		</div>
+		<div id="photo_attachment_container">
+		    <%= card_form.file_field :card_image %>
+		</div>
+	<% end %>
+
 </table>

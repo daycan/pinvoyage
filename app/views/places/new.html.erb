@@ -6,16 +6,19 @@
 
 	<h2>Create a new Pin</h2>
 
-	<%= form_tag(:action => 'check_exists') do %>
+	<%= form_for(:place, :url => {:action => 'create'}) do |f| %>
 
-		<%= render(:partial => "form") %>
+		<%= render(:partial => "form", :locals => {:f => f})  %>
 
-		<div class="form-buttons">
-			<%= submit_tag("Create Pin") %>
+		<br>
+
+		<div id="photo_attachment_container">
+			<div class="wrapper">
+				<%= submit_tag("Create Pin") %>
+			</div>
+			<button class="btn btn-success">Create Pin</button>
 		</div>
 
 	<% end %>
 
-
 </div>
-

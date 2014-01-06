@@ -3,7 +3,7 @@
 <div class="places index">
 	<h2>Places</h2>
 
-	<%= link_to("Add New Place", {:action => 'new'}, :class => 'action new') %>
+	<%= link_to("Add New Place", {:controller => 'cards', :action => 'new'}, :class => 'action new') %>
 
 	<table class="table" summary="Place list">
 		<tr class="header">

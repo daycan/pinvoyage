@@ -59,14 +59,16 @@ class PinsController < ApplicationController
     end
   end
 
+  def delete
+    @pin = Pin.find(params[:id])
+  end
+
   # DELETE /pins/1
   # DELETE /pins/1.json
   def destroy
     @pin.destroy
-    respond_to do |format|
-      format.html { redirect_to pins_url }
-      format.json { head :no_content }
-    end
+    flash[:notice] = "'#{@pin.id}' destroyed successfully."
+    redirect_to(:action => 'index')
   end
 
   private

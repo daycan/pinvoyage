@@ -26,3 +26,27 @@
 #errorExplanation table { color:#713838; }
 #errorExplanation tr { color:#713838; }
 
+
+#photo_attachment_container {
+    position: relative;
+}
+
+#photo_attachment_container .wrapper {
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+/*
+#photo_attachment_container button {
+}
+
+#photo_attachment_container .wrapper:hover {
+    opacity: 0.5;
+}
+*/
+
+
+

@@ -1,6 +1,24 @@
-<% title "Create New Pin" %>
+<% title "Create New Card" %>
 
-<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+<%= link_to("Back to List", {:controller => 'cards', :action => 'index'}, :class => 'btn back-link') %>
 
-	<h2>Warning: Create new pins via Place actions 'New' and 'Check Exist'</h2>
+<div class="Card new">
 
+	<h2>Create a new Card</h2>
+
+	<%= form_for(:card, :url => {:action => 'create'}) do |f| %>
+
+		<%= render(:partial => "form", :locals => {:f => f})  %>
+
+		<br>
+
+		<div id="photo_attachment_container">
+			<div class="wrapper">
+				<%= submit_tag("Create Pin") %>
+			</div>
+			<button class="btn btn-success">Create Pin</button>
+		</div>
+
+	<% end %>
+
+</div>

@@ -14,11 +14,23 @@ class CardsController < ApplicationController
   end
 
   def new
-    # This is handled by the 'place' controller via the 'new' and 'check_exist' actions
+    @card = Card.new
+    @place = Place.new
   end
 
   def create
-    # This is handled by the 'place' controller via the 'new' and 'check_exist' actions
+    @card = Card.new(card_params)
+    @card.place_id = 1
+    if @card.save
+      @pin = Pin.new
+      @pin.card_id = @card.id
+      @pin.description = "Default description"
+      @pin.save
+      flash[:notice] = "Card created successfully."
+      redirect_to(:action => "index")
+    else
+      render('new')
+    end
   end
 
   def edit
@@ -51,7 +63,7 @@ class CardsController < ApplicationController
   private
 
     def card_params
-      params.require(:card).permit(:place_id, :text)
+      params.require(:card).permit(:id, :pin_id, :place_id, :text, :card_image)
     end
 
     def find_place

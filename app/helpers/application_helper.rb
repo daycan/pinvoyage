@@ -8,10 +8,6 @@ module ApplicationHelper
   	content_for :title, page_title.to_s
 	end
 
-	private
 
-		def determine_layout
-			session[:user_id] ? "application" : "not_logged_in"
-		end
 	
 end

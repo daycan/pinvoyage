@@ -1,7 +1,12 @@
-	<table summary="Card form fields">
-		
-		<tr>
-			<th>Text</th>
-			<td><%= f.text_field(@card.text) %></td>
-		</tr>
-	</table>
+<%= error_messages_for(@place) %>
+
+<form summary="Card form fields">
+	<div>
+		<%= f.label(:text, "Description") %>
+		<%= f.text_area(:text, :size => "10x5") %>
+	</div>
+	<div id="photo_attachment_container">
+	   <%= f.file_field :card_image %>
+	</div>
+
+</table>

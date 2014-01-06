@@ -11,13 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140106020450) do
+ActiveRecord::Schema.define(version: 20140106051556) do
 
   create_table "cards", force: true do |t|
     t.integer  "place_id"
     t.string   "text"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "card_image_file_name"
+    t.string   "card_image_content_type"
+    t.integer  "card_image_file_size"
+    t.datetime "card_image_updated_at"
   end
 
   add_index "cards", ["place_id"], name: "index_cards_on_place_id", using: :btree

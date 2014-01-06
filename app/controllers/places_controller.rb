@@ -13,29 +13,27 @@ class PlacesController < ApplicationController
   end
 
   def new
-    @card = Card.new
     @place = Place.new
   end
 
-  def check_exists
+  def create
     @place = Place.new(place_params)
-    @card = Card.new(card_params)
-    @pin = Pin.new
-    #@place.temp_card_text = params[temp_card_text]
-    #@card = Card.new
-    @place_exist = Place.where(:name => @place.name, :city => @place.city, :country => @place.country)
-    if !@place_exist.blank?
-      @place = @place_exist
-    end
+    @card = Card.new({:card_image => params[:cards_attributes].card_image})
 
-    if @place.save
-      flash[:notice] = "'#{@place.name}' created successfully."
+    if @place.save 
       @card.place_id = @place.id
-      @card.save
-      @pin.card_id = @card.id
-      @pin.user_id = session[:user_id]
-      @pin.save
-      redirect_to(:controller => 'pins', :action => 'index')
+      @card.save 
+      #@card = Card.new(card_params)
+      #@card.place_id = @place.id
+      #@card.card_image = params[:card_image]
+      #@card.save
+      flash[:notice] = "'#{@place.name}' created successfully."
+      #@card.place_id = @place.id
+      #@card.save
+      #@pin.card_id = @card.id
+      #@pin.user_id = session[:user_id]
+      #@pin.save
+      redirect_to(:controller => 'cards', :action => 'index')
     else
       # If save, fails, redisplay the form so the user can fix problems
       render('new')
@@ -79,11 +77,11 @@ class PlacesController < ApplicationController
       # same as using "params[:place]", except that it:
       # - raises an error if :place is not present
       # - allows listed attributes to be mass-assigned
-      params.require(:place).permit(:name, :location_type, :city, :country)
+      params.require(:place).permit(:name, :location_type, :city, :country, cards_attributes: [:id, :place_id, :card_image, :text])
     end
 
     def card_params
-      params.require(:card).permit(:text)
+      params.require(:place).permit(cards_attributes: [:id, :card_image, :text])
     end
 
 

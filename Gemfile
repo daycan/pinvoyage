@@ -17,6 +17,12 @@ gem 'sass-rails', '~> 4.0.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
+# for uploading files in forms
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+
+# image resizing
+gem 'rmagick', '2.13.2', :git=>'http://github.com/rmagick/rmagick.git'
+
 # to help with geocoding
 gem 'geocoder'
 
