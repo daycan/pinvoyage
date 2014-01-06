@@ -1,6 +1,21 @@
 <%= error_messages_for(@place) %>
 
 <form summary="Card form fields">
+	
+	<%= f.fields_for(:place) do |fp| %>
+		<div>
+			<%= fp.label(:name, "Name of Place") %>
+			<%= fp.text_field(:name) %>
+		</div>
+		<div>
+			<%= fp.label(:city) %>
+			<%= fp.text_field(:city) %>
+		</div>
+		<div>
+			<%= fp.label(:country) %>
+			<%= fp.text_field(:country) %>
+		</div>
+	<% end %>
 	<div>
 		<%= f.label(:text, "Description") %>
 		<%= f.text_area(:text, :size => "10x5") %>

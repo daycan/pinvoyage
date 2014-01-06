@@ -15,12 +15,15 @@ class CardsController < ApplicationController
 
   def new
     @card = Card.new
-    @place = Place.new
+    @card.build_place
   end
 
   def create
     @card = Card.new(card_params)
-    @card.place_id = 1
+    @place = @card.build_place
+    @place.country = params[:card][:place_attributes]["0"][:country]
+    @place.save
+
     if @card.save
       @pin = Pin.new
       @pin.card_id = @card.id
@@ -63,7 +66,12 @@ class CardsController < ApplicationController
   private
 
     def card_params
-      params.require(:card).permit(:id, :pin_id, :place_id, :text, :card_image)
+      params.require(:card).permit(:text, :card_image)
+      #params.require(:card).permit(:text, :card_image, :place => [:name, :city, :country])
+    end
+
+    def place_params
+      params.require(:card).permit(:place => [:name, :city, :country])
     end
 
     def find_place
