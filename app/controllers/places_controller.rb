@@ -1,6 +1,6 @@
 class PlacesController < ApplicationController
   
-  layout "application"
+  layout :determine_layout
 
   before_action :confirm_logged_in
 
@@ -20,6 +20,7 @@ class PlacesController < ApplicationController
   def check_exists
     @place = Place.new(place_params)
     @card = Card.new(card_params)
+    @pin = Pin.new
     #@place.temp_card_text = params[temp_card_text]
     #@card = Card.new
     @place_exist = Place.where(:name => @place.name, :city => @place.city, :country => @place.country)
@@ -31,7 +32,10 @@ class PlacesController < ApplicationController
       flash[:notice] = "'#{@place.name}' created successfully."
       @card.place_id = @place.id
       @card.save
-      redirect_to(:controller => 'cards', :action => 'index')
+      @pin.card_id = @card.id
+      @pin.user_id = session[:user_id]
+      @pin.save
+      redirect_to(:controller => 'pins', :action => 'index')
     else
       # If save, fails, redisplay the form so the user can fix problems
       render('new')

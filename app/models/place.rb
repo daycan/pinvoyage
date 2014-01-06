@@ -4,6 +4,10 @@ class Place < ActiveRecord::Base
 	accepts_nested_attributes_for :cards
 	
 	validates_presence_of :country
+	validates_length_of :name, :maximum => 50
+	validates_length_of :city, :maximum => 40
+	validates_length_of :country, :maximum => 40
+
 
 	attr_accessor :text
 
@@ -26,7 +30,7 @@ class Place < ActiveRecord::Base
 	}	
 
 	def full_street_address
-		name + ", " + city + ", " + country
+		[name, city, country].compact.join(', ')
 	end
 
 end

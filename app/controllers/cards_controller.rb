@@ -1,6 +1,6 @@
 class CardsController < ApplicationController
   
-  layout "application"
+  layout :determine_layout
 
   before_action :confirm_logged_in
   before_action :find_place

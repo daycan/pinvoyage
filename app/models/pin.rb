@@ -1,6 +1,8 @@
 class Pin < ActiveRecord::Base
 
-	belong_to :user
-	belong_to :card
+	belongs_to :user
+	belongs_to :card
+
+	acts_as_list :scope => :user
 
 end

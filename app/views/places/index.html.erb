@@ -5,7 +5,7 @@
 
 	<%= link_to("Add New Place", {:action => 'new'}, :class => 'action new') %>
 
-	<table class="listing" summary="Place list">
+	<table class="table" summary="Place list">
 		<tr class="header">
 			<th>&nbsp;</th>
 			<th>Name</th>
@@ -26,9 +26,9 @@
 			<td><%= place.longitude %></td>
 			<td><%= place.location_type %></td>
 			<td class="actions">
-				<%= link_to("Show", {:action => 'show', :id => place.id}, :class => 'action show') %>
-				<%= link_to("Edit", {:action => 'edit', :id => place.id}, :class => 'action edit') %>
-				<%= link_to("Delete", {:action => 'delete', :id => place.id}, :class => 'action delete') %>
+				<%= link_to("Show", {:action => 'show', :id => place.id}, :class => 'btn btn-small action') %>
+				<%= link_to("Edit", {:action => 'edit', :id => place.id}, :class => 'btn btn-small action edit') %>
+				<%= link_to("Delete", {:action => 'delete', :id => place.id}, :class => 'btn btn-small btn-danger action delete') %>
 			</td>
 		</tr>
 		<% end %>

@@ -1,5 +1,7 @@
 class AccessController < ApplicationController
 
+  layout :determine_layout
+
   before_action :confirm_logged_in, :except => [:login, :attempt_login, :logout]
 
   def index
@@ -24,7 +26,7 @@ class AccessController < ApplicationController
 	  	session[:username] = authorized_user.username
 	  	session[:email] = authorized_user.email
 	  	flash[:notice] = "you are now logged in."
-	  	redirect_to(:controller => 'cards')
+	  	redirect_to(:controller => 'pins')
 	  else
 	  	flash[:notice] = "Invalid username/password combination."
 	  	redirect_to(:action => 'login')

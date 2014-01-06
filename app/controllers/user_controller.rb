@@ -1,6 +1,6 @@
 class UserController < ApplicationController
 
-  layout "application"
+  layout :determine_layout
   
   before_action :confirm_logged_in, :except => [:new, :create,]
 
@@ -19,7 +19,7 @@ class UserController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:notice] = "Account created successfully."
-      redirect_to(:controller => "cards")
+      redirect_to(:controller => "access", :action => "attempt_login", :email => @user.email, :password => @user.password)
     else
       render('new')
     end
@@ -54,7 +54,6 @@ class UserController < ApplicationController
   def user_params
     params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :password_confirmation)
   end
-
 
 
 end

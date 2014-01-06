@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140105011633) do
+ActiveRecord::Schema.define(version: 20140106020450) do
 
   create_table "cards", force: true do |t|
     t.integer  "place_id"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20140105011633) do
     t.integer  "card_id"
     t.integer  "user_id"
     t.string   "description"
+    t.integer  "position"
   end
 
   add_index "pins", ["card_id", "user_id"], name: "index_pins_on_card_id_and_user_id", using: :btree

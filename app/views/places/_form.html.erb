@@ -1,28 +1,28 @@
+<%= error_messages_for(@place) %>
 
-	<table summary="Place and Card form fields">
-		<tr>
-			<th>Name</th>
-			<td><%= text_field(:place, :name) %></td>
-		</tr>
-		<tr>
-			<th>Type</th>
-			<td>
-				<%= radio_button(:place, :location_type, 'restaurant') %> Restaurant
-				<%= radio_button(:place, :location_type, 'bar') %> Bar
-				<%= radio_button(:place, :location_type, 'site') %> Site
-				<%= radio_button(:place, :location_type, 'activity') %> Activity
-			</td>
-		</tr>
-		<tr>
-			<th>City</th>
-			<td><%= text_field(:place, :city) %></td>
-		</tr>
-		<tr>
-			<th>Country</th>
-			<td><%= text_field(:place, :country) %></td>
-		</tr>
-		<tr>
-			<th>Description</th>
-			<td><%= text_area(:card, :text, :size => "10x5") %></td>
-		</tr>
-	</table>
+<form summary="Place and Card form fields">
+	<div>
+		<%= label(:place, :name) %>
+		<%= text_field(:place, :name) %>
+	</div>
+	<div>
+		<%= label(:place, :location_type, "Type") %>
+		
+			<%= radio_button(:place, :location_type, 'restaurant') %> Restaurant
+			<%= radio_button(:place, :location_type, 'bar') %> Bar
+			<%= radio_button(:place, :location_type, 'site') %> Site
+			<%= radio_button(:place, :location_type, 'activity') %> Activity
+	</div>
+	<div>
+		<%= label(:place, :city) %>
+		<%= text_field(:place, :city) %>
+	</div>
+	<div>
+		<%= label(:place, :country) %>
+		<%= text_field(:place, :country) %>
+	</div>
+	<div>
+		<%= label(:card, :text, "Description") %>
+		<%= text_area(:card, :text, :size => "10x5") %>
+	</div>
+</table>

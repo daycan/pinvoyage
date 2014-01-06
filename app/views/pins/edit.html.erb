@@ -1,0 +1,17 @@
+<% title "Edit Pin" %>
+
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="pin edit">
+	<h2>Update Pin</h2>
+
+	<%= form_for(:pin, :url => {:action => 'update', :id => @pin.id}) do |f| %>
+	
+		<%= render(:partial => "form", :locals => {:f => f}) %>
+
+	<div class="form-buttons">
+		<%= submit_tag("Update Pin") %>
+	</div>
+
+	<% end %>
+</div>

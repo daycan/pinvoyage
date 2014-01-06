@@ -9,6 +9,8 @@ gem 'mysql2'
 gem "less-rails"
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
+gem "font-awesome-sass-rails", "~> 3.0.2.2"
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -17,6 +19,8 @@ gem 'uglifier', '>= 1.3.0'
 
 # to help with geocoding
 gem 'geocoder'
+
+gem "acts_as_list", "~> 0.3.0"
 
 # Use CoffeeScript for .js.coffee assets and views
 #gem 'coffee-rails', '~> 4.0.0'

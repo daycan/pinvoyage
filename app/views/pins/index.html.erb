@@ -1,0 +1,36 @@
+<% title "My Pins" %>
+
+<div class="cards index">
+
+  <div class="span12 pagination-centered" >
+    <%= image_tag('script_logo_noback.png', :size => '223x107', :alt => '<h1>PinVoyage</h1>') %>
+    <br><br>
+    <%= link_to("Add Pin", {:controller => 'places', :action => 'new'}, :class => 'btn') %>
+    <br><br>
+
+    <table class="table" summary="Card list">
+      <tr class="header">
+        <th>Place ID</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Card Text</th>
+        <th>Pin Text</th>
+        <th>Actions</th>
+      </tr>
+      <% @pins.each do |pin| %>
+        <tr>
+          <td><%= pin.card.place_id %></td>
+          <td><%= pin.card.place.name %></td>
+          <td><%= pin.card.place.location_type %></td>
+          <td><%= pin.card.text %></td>
+          <td><%= pin.description %></td>
+          <td class="actions" >
+            <%= link_to(raw('<i class="fa fa-camera-retro fa-lg"></i>'), {:action => 'show', :id => pin.id}, :class => 'btn btn-small') %>
+            <%= link_to(raw('<i class="icon-pencil"></i>'), {:action => 'edit', :id => pin.id}, :class => 'btn btn-small') %>
+            <%= link_to(raw('<i class="icon-trash icon-white"></i>'), {:action => 'delete', :id => pin.id}, :class => 'btn btn-small btn-danger') %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

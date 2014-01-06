@@ -1,0 +1,12 @@
+<% title "Pin Details" %>
+
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="pin show">
+	<h2><%= @pin.card.place.name %></h2>
+	<p><%= @pin.card.place.location_type %></p>
+	<p><%= @pin.card.place.city %></p>
+	<p><%= @pin.card.place.country %></p>
+	<p><%= @pin.card.text %></p>
+	<p><%= @pin.description %></p>
+</div>
