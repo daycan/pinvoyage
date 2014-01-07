@@ -6,6 +6,8 @@ gem 'rails', '4.0.2'
 # Use mysql as the database for Active Record
 gem 'mysql2'
 
+gem 'pry'
+
 gem "less-rails"
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 

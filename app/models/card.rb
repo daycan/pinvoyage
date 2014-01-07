@@ -3,6 +3,7 @@ class Card < ActiveRecord::Base
 	belongs_to :place
 	has_many :pins
 	has_many :users, :through => :pins
+	accepts_nested_attributes_for :place
 
 	has_attached_file :card_image, :styles => { :large => "900x", :medium => "300x", :thumb => "100x"}
 

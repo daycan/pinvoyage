@@ -14,20 +14,20 @@ class CardsController < ApplicationController
   end
 
   def new
+    @place = Place.new
     @card = Card.new
-    @card.build_place
   end
 
   def create
     @card = Card.new(card_params)
-    @place = @card.build_place
-    @place.country = params[:card][:place_attributes]["0"][:country]
+    @place = Place.new(place_params)
     @place.save
+    @card.place = @place
 
     if @card.save
       @pin = Pin.new
       @pin.card_id = @card.id
-      @pin.description = "Default description"
+      #@pin.description = "Default description"
       @pin.save
       flash[:notice] = "Card created successfully."
       redirect_to(:action => "index")
@@ -35,6 +35,24 @@ class CardsController < ApplicationController
       render('new')
     end
   end
+
+#CHEAT SHEET
+#subject = Subject.new(:name => params[:name],
+#  :position => params[:position],
+#  :visible => params[:visible])
+
+#params[:subject][:name]
+#params[:subject][:position]
+#params[:subject][:visible]
+#subject = Subject.new(params[:subject])
+
+#Basic non-object form
+# <%= form_tag(:action => 'create') do %>
+#  <div>
+#    <%= label(:place, :name, "Name of Place") %>
+#    <%= text_field(:place, :name) %>
+#  </div>
+
 
   def edit
     @card = Card.find(params[:id])
@@ -66,12 +84,12 @@ class CardsController < ApplicationController
   private
 
     def card_params
-      params.require(:card).permit(:text, :card_image)
+      params.require(:card).permit(:place_id, :text, :card_image)
       #params.require(:card).permit(:text, :card_image, :place => [:name, :city, :country])
     end
 
     def place_params
-      params.require(:card).permit(:place => [:name, :city, :country])
+      params.require(:place).permit(:id, :name, :city, :country)
     end
 
     def find_place
