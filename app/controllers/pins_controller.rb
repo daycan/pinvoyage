@@ -28,21 +28,6 @@ class PinsController < ApplicationController
     @pin = Pin.find(params[:id])
   end
 
-  # POST /pins
-  # POST /pins.json
-  def create
-    @pin = Pin.new(pin_params)
-
-    respond_to do |format|
-      if @pin.save
-        format.html { redirect_to @pin, notice: 'Pin was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @pin }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @pin.errors, status: :unprocessable_entity }
-      end
-    end
-  end
 
   # PATCH/PUT /pins/1
   # PATCH/PUT /pins/1.json

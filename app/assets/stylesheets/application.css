@@ -13,7 +13,6 @@
  */
 
 /* Errors */
-
 /* .field_with_erors { @extend .has-error; } */
 .field_with_errors td { .has-error; } 
 .field_with_errors label { color: #CC0000;} 
@@ -26,6 +25,8 @@
 #errorExplanation table { color:#713838; }
 #errorExplanation tr { color:#713838; }
 
+
+*= require 'masonry/centered'
 
 #photo_attachment_container {
     position: relative;

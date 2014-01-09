@@ -5,10 +5,6 @@ class CardsController < ApplicationController
   before_action :confirm_logged_in
   before_action :find_place
 
-  def index
-    @cards = Card.newest_first
-  end
-
   def show
     @card = Card.find(params[:id])
   end
@@ -27,6 +23,7 @@ class CardsController < ApplicationController
     if @card.save
       @pin = Pin.new
       @pin.card_id = @card.id
+      @pin.user_id = session[:user_id]
       #@pin.description = "Default description"
       @pin.save
       flash[:notice] = "Card created successfully."
@@ -35,24 +32,6 @@ class CardsController < ApplicationController
       render('new')
     end
   end
-
-#CHEAT SHEET
-#subject = Subject.new(:name => params[:name],
-#  :position => params[:position],
-#  :visible => params[:visible])
-
-#params[:subject][:name]
-#params[:subject][:position]
-#params[:subject][:visible]
-#subject = Subject.new(params[:subject])
-
-#Basic non-object form
-# <%= form_tag(:action => 'create') do %>
-#  <div>
-#    <%= label(:place, :name, "Name of Place") %>
-#    <%= text_field(:place, :name) %>
-#  </div>
-
 
   def edit
     @card = Card.find(params[:id])
@@ -75,12 +54,6 @@ class CardsController < ApplicationController
     @card = Card.find(params[:id])
   end
 
-  def destroy
-    card = Card.find(params[:id]).destroy
-    flash[:notice] = "Pin destroyed successfully."
-    redirect_to(:action => 'index')
-  end
-
   private
 
     def card_params
@@ -89,7 +62,7 @@ class CardsController < ApplicationController
     end
 
     def place_params
-      params.require(:place).permit(:id, :name, :city, :country)
+      params.require(:place).permit(:id, :name, :city, :country, :location_type)
     end
 
     def find_place

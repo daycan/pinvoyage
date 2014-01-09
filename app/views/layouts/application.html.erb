@@ -47,15 +47,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="">PinVoyage</a>
+          <%= link_to "PinVoyage", {:controller => "pins", :action => "browse"}, :class => "brand" %>
 
           <div class="container-fluid nav-collapse">
             <ul class="nav">
-              <li><%= link_to "My Pins", :controller => "pins" %></li>
+              <li><%= link_to "My Pins", :controller => "pins", :action => "index" %></li>
               <li><%= link_to "Browse Pins", :controller => "pins", :action => "browse" %></li>
               <li><%= link_to "Map", "#" %></li>
               <li><%= link_to "Places", :controller => "places" %></li>
-              <li><%= link_to "Add Pin", :controller => "places", :action => "new" %></li>
+              <li><%= link_to "Add Pin", :controller => "cards", :action => "new" %></li>
               <li><%= link_to "Log Out", :controller => "access", :action => "logout"  %></li>
             </ul>
             <p class="navbar-text navbar-right"><a href="#" class="navbar-link"><%= session[:email] %></a></p>
@@ -67,20 +67,19 @@
     </div>
 
     <div class="container-fluid">
+
       <div class="row-fluid">
         
-        <div class="span12">
-          <%= bootstrap_flash %>
+        <%= bootstrap_flash %>
 
-          <%= yield %>
-        </div>
-      </div><!--/row-->
+        <%= yield %>
 
       <footer>
         <p>&copy; PinVoyage 2014</p>
       </footer>
 
-    </div> <!-- /container -->
+      </div> <!-- /container -->
+    </div>
 
   </body>
 </html>
