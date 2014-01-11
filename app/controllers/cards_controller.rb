@@ -27,7 +27,7 @@ class CardsController < ApplicationController
       #@pin.description = "Default description"
       @pin.save
       flash[:notice] = "Card created successfully."
-      redirect_to(:action => "index")
+      redirect_to(:controller => "pins", :action => "index")
     else
       render('new')
     end

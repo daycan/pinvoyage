@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140106051556) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "cards", force: true do |t|
     t.integer  "place_id"
     t.string   "text"
@@ -39,11 +42,11 @@ ActiveRecord::Schema.define(version: 20140106051556) do
 
   create_table "places", force: true do |t|
     t.string   "name",          limit: 50
-    t.string   "location_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.float    "latitude",                 default: 0.0
     t.float    "longitude",                default: 0.0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "location_type"
     t.string   "city",          limit: 40
     t.string   "country",       limit: 40
   end
@@ -54,9 +57,9 @@ ActiveRecord::Schema.define(version: 20140106051556) do
     t.string   "first_name",      limit: 25
     t.string   "last_name",       limit: 50
     t.string   "email",                      default: "", null: false
-    t.string   "username",        limit: 25
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "username",        limit: 25
     t.string   "password_digest"
   end
 

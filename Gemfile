@@ -3,16 +3,17 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
+gem 'rails_12factor', group: :production
+
 # Use mysql as the database for Active Record
-gem 'mysql2'
+#gem 'mysql2'
+gem 'pg'
 
 gem 'pry'
 
 gem "less-rails"
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
-
 gem 'masonry-rails'
-
 gem "font-awesome-sass-rails", "~> 3.0.2.2"
 
 # Use SCSS for stylesheets
@@ -63,3 +64,5 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+ruby "2.0.0"
