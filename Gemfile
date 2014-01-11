@@ -27,10 +27,14 @@ gem 'uglifier', '>= 1.3.0'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 # image resizing
-# gem 'rmagick', '2.13.2'
+gem 'rmagick', '2.13.2', :git=>'http://github.com/rmagick/rmagick.git'
 
 # to help with geocoding
-gem 'geocoder'
+gem "foursquare2", "~> 1.9.8"
+#gem 'geocoder'
+
+# to help authorize with services like FourSquare and Facebook
+gem "oauth2", "~> 0.9.2"
 
 gem "acts_as_list", "~> 0.3.0"
 
