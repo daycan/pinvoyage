@@ -18,12 +18,6 @@ GIT
       cocaine (~> 0.5.3)
       mime-types
 
-GIT
-  remote: http://github.com/rmagick/rmagick.git
-  revision: 79e1708c7f6792a3a90cb8cb3ffaeb74c58e092e
-  specs:
-    rmagick (2.13.2)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -183,7 +177,6 @@ DEPENDENCIES
   pry
   rails (= 4.0.2)
   rails_12factor
-  rmagick (= 2.13.2)!
   sass-rails (~> 4.0.0)
   sdoc
   therubyracer

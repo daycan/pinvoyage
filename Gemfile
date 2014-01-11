@@ -27,7 +27,7 @@ gem 'uglifier', '>= 1.3.0'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 # image resizing
-gem 'rmagick', '2.13.2', :git=>'http://github.com/rmagick/rmagick.git'
+# gem 'rmagick', '2.13.2'
 
 # to help with geocoding
 gem 'geocoder'
