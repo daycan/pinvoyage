@@ -4,13 +4,14 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 gem 'rails_12factor', group: :production
-
-# Use mysql as the database for Active Record
-#gem 'mysql2'
 gem 'pg'
 
+
+
+# For debugging
 gem 'pry'
 
+#formatting, CSS, HTML, etc.
 gem "less-rails"
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'masonry-rails'
