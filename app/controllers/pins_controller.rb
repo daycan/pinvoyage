@@ -1,8 +1,6 @@
 class PinsController < ApplicationController
   
-  layout :determine_layout
-
-  before_action :confirm_logged_in
+  layout 'application'
 
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
 

@@ -50,15 +50,24 @@
           <%= link_to "PinVoyage", {:controller => "pins", :action => "browse"}, :class => "brand" %>
 
           <div class="container-fluid nav-collapse">
-            <ul class="nav">
-              <li><%= link_to "My Pins", :controller => "pins", :action => "index" %></li>
-              <li><%= link_to "Browse Pins", :controller => "pins", :action => "browse" %></li>
-              <li><%= link_to "Map", "#" %></li>
-              <li><%= link_to "Places", :controller => "places" %></li>
-              <li><%= link_to "Add Pin", :controller => "cards", :action => "new" %></li>
-              <li><%= link_to "Log Out", :controller => "access", :action => "logout"  %></li>
-            </ul>
-            <p class="navbar-text navbar-right"><a href="#" class="navbar-link"><%= session[:email] %></a></p>
+            <% if user_signed_in? %>
+              <ul class="nav">
+                <li><%= link_to "My Pins", :controller => "pins", :action => "index" %></li>
+                <li><%= link_to "Browse Pins", :controller => "pins", :action => "browse" %></li>
+                <li><%= link_to "Map", "#" %></li>
+                <li><%= link_to "Places", :controller => "places" %></li>
+                <li><%= link_to "Add Pin", :controller => "cards", :action => "new" %></li>
+              </ul>
+            <% end %>
+            <p class="navbar-text pull-right">
+              <% if user_signed_in? %>
+                Logged in as <strong><%= current_user.email %></strong>.
+                <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+                <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+              <% else %>
+                <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+                <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+              <% end %>
           </div><!--/.nav-collapse -->
 
         </div>

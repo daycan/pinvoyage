@@ -11,8 +11,6 @@
 			<th>Name</th>
 			<th>City</th>
 			<th>Country</th>
-			<th>Latitude</th>
-			<th>Longitude</th>
 			<th>Type</th>
 			<th>Actions</th>
 		</tr>
@@ -22,8 +20,6 @@
 			<td><%= place.name %></td>
 			<td><%= place.city %></td>
 			<td><%= place.country %></td>
-			<td><%= place.latitude %></td>
-			<td><%= place.longitude %></td>
 			<td><%= place.location_type %></td>
 			<td class="actions">
 				<%= link_to("Show", {:action => 'show', :id => place.id}, :class => 'btn btn-small action') %>

@@ -5,5 +5,6 @@ class CreateCards < ActiveRecord::Migration
       t.string "text"
       t.timestamps
     end
+    add_index("cards", "place_id")
   end
 end

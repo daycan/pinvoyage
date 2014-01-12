@@ -1,5 +1,6 @@
 Pinvoyage::Application.routes.draw do
   
+  devise_for :users
   root "pins#browse"
 
   match ':controller(/:action(/:id))', :via => [:get, :post]
