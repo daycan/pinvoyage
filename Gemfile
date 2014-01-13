@@ -11,6 +11,9 @@ group :production do
   gem "rails_12factor", "~> 0.0.2"
 end
 
+# Helps manage environment variables
+gem "figaro", "~> 0.7.0"
+
 # For debugging
 gem 'pry'
 
