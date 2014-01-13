@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require_tree .
+ *= require 'masonry/centered'
  */
 
 /* Errors */
@@ -27,7 +28,7 @@
 #errorExplanation tr { color:#713838; }
 
 
-*= require 'masonry/centered'
+
 
 #photo_attachment_container {
     position: relative;
