@@ -16,7 +16,7 @@
 /* .field_with_erors { @extend .has-error; } */
 .field_with_errors td { .has-error; } 
 .field_with_errors label { color: #CC0000;} 
-.field_with_errors input { background-color: #F0B2B2, border: 1px solid #AA0000;}
+.field_with_errors input { background-color: #F0B2B2; border: 1px solid #AA0000;}
 #errorExplanation {background-color: #F0B2B2; font-size: 12px; border: 12px #CC0000;}
 #errorExplanation blockquote {border-left: 12px #CC0000;}
 #errorExplanation h5 { color:#713838; }
