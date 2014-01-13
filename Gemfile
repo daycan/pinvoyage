@@ -5,8 +5,11 @@ gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-gem 'rails_12factor', group: :production
-gem 'pg'
+
+group :production do
+  gem "pg", "~> 0.17.1"
+  gem "rails_12factor", "~> 0.0.2"
+end
 
 
 
@@ -29,7 +32,7 @@ gem 'uglifier', '>= 1.3.0'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 # image resizing
-gem 'rmagick', '2.13.2', :git=>'http://github.com/rmagick/rmagick.git'
+gem "rmagick", "~> 2.13.2", :require => 'RMagick'
 
 # to help with geocoding
 gem "foursquare2", "~> 1.9.8"
