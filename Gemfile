@@ -15,8 +15,9 @@ end
 gem "figaro", "~> 0.7.0"
 
 # For debugging
-gem 'pry'
-
+group :development do
+	gem 'pry'
+end
 #formatting, CSS, HTML, etc.
 gem "less-rails"
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
@@ -48,7 +49,7 @@ gem "acts_as_list", "~> 0.3.0"
 #gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'therubyracer', platforms: :ruby
+# gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
