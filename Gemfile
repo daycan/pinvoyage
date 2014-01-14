@@ -17,6 +17,7 @@ gem "figaro", "~> 0.7.0"
 # For debugging
 group :development do
 	gem 'pry'
+	gem 'awesome_print'
 end
 #formatting, CSS, HTML, etc.
 gem "less-rails"

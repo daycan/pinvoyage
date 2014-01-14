@@ -22,7 +22,7 @@ class CardsController < ApplicationController
     if @card.save
       @pin = Pin.new
       @pin.card_id = @card.id
-      @pin.user_id = session[:user_id]
+      @pin.user_id = current_user.id
       #@pin.description = "Default description"
       @pin.save
       flash[:notice] = "Card created successfully."

@@ -7,7 +7,7 @@ class PinsController < ApplicationController
   # GET /pins
   # GET /pins.json
   def index
-    @pins = Pin.where(:user_id => session[:user_id])
+    @pins = Pin.where(:user_id => current_user.id)
   end
 
   def browse

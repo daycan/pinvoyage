@@ -49,6 +49,7 @@ GEM
       activerecord (>= 3.0)
     arel (4.0.1)
     atomic (1.1.14)
+    awesome_print (1.2.0)
     bcrypt-ruby (3.1.2)
     builder (3.1.4)
     climate_control (0.0.3)
@@ -189,6 +190,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts_as_list (~> 0.3.0)
+  awesome_print
   bcrypt-ruby (~> 3.1.2)
   devise
   figaro (~> 0.7.0)
