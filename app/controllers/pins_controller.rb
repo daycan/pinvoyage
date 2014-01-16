@@ -11,7 +11,7 @@ class PinsController < ApplicationController
   end
 
   def browse
-    @pins = Pin.all
+    @pins = Pin.where('user_id != ?', current_user.id)
   end
 
   def repin
