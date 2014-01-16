@@ -14,6 +14,15 @@ class PinsController < ApplicationController
     @pins = Pin.all
   end
 
+  def repin
+    pin = Pin.new
+    pin.card_id = params[:id]
+    pin.user_id = current_user.id
+    pin.description = params[:description]
+    binding.pry
+    pin.save
+    redirect_to(:action => 'browse')
+  end
 
   # GET /pins/1
   # GET /pins/1.json

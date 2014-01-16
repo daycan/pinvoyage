@@ -16,6 +16,9 @@
           <p style="display:inline; float:right"><%= pin.card.place.location_type %></p>
           <p><%= pin.card.text %></p>
           <p><%= pin.description %></p>
+          <div style="float: left">
+            <%= link_to("Pin It", {:action => 'repin', :id => pin.id, :desicription => pin.description}, :class => 'btn btn-xs btn-danger') %>
+          </div>
           <div style="float: right">
             <%= link_to(raw('<i class="icon-eye-open"></i>'), {:action => 'show', :id => pin.id}) %>
             <%= link_to(raw('<i class="icon-pencil"></i>'), {:action => 'edit', :id => pin.id}) %>
