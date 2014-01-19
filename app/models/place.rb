@@ -27,12 +27,17 @@ class Place < ActiveRecord::Base
 		[name, city, country].compact.join(', ')
 	end
 
-	def get_foursquare_lat_long
+	def city_country
+		[city, country].compact.join(', ')
+	end
+
+	def get_foursquare_lat_lng
 		client = Foursquare2::Client.new(:client_id => ENV['FOURSQUARE_CLIENT_ID'], :client_secret => ENV['FOURSQUARE_CLIENT_SECRET'])
-		tempVenue = client.search_venues(near: 'San Francisco, CA', query: "Red's Java")["groups"][0]["items"][0]
-		tempVenueLat = tempVenue["location"]["lat"]
-		tempVenueLng = tempVenue["location"]["lng"]
-		tempVenueId = tempVenue["id"]
+		tempVenue = client.search_venues(near: self.city_country , query: self.name)["groups"][0]["items"][0]
+		self.latitude = tempVenue["location"]["lat"]
+		self.longitude = tempVenue["location"]["lng"]
+		self.service = "foursquare"
+		self.service_id = tempVenue["id"]
 	end
 	
 end
