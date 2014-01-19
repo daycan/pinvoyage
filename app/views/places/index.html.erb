@@ -12,6 +12,8 @@
 			<th>City</th>
 			<th>Country</th>
 			<th>Type</th>
+			<th>Latitude</th>
+			<th>Longitude</th>
 			<th>Actions</th>
 		</tr>
 		<% @places.each do |place| %>
@@ -21,6 +23,8 @@
 			<td><%= place.city %></td>
 			<td><%= place.country %></td>
 			<td><%= place.location_type %></td>
+			<td><%= place.latitude %></td>
+			<td><%= place.longitude %></td>
 			<td class="actions">
 				<%= link_to("Show", {:action => 'show', :id => place.id}, :class => 'btn btn-small action') %>
 				<%= link_to("Edit", {:action => 'edit', :id => place.id}, :class => 'btn btn-small action edit') %>
