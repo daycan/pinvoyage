@@ -34,6 +34,9 @@ gem 'uglifier', '>= 1.3.0'
 # for uploading files in forms
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
+# for managing pin-images
+gem "aws-sdk"
+
 # image resizing
 gem "rmagick", "~> 2.13.2", :require => 'RMagick'
 
