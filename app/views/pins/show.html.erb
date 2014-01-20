@@ -3,6 +3,7 @@
 <%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
 
 <div class="pin show">
+	<%= image_tag @pin.card.card_image.url(:large) %>
 	<h2><%= @pin.card.place.name %></h2>
 	<p><%= @pin.card.place.location_type %></p>
 	<p><%= @pin.card.place.city %></p>
