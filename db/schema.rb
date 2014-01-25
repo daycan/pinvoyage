@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140113181134) do
+ActiveRecord::Schema.define(version: 20140125170810) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cards", force: true do |t|
     t.integer  "place_id"
-    t.string   "text"
+    t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "card_image_file_name"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20140113181134) do
   create_table "pins", force: true do |t|
     t.integer  "card_id"
     t.integer  "user_id"
-    t.string   "description"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "position"
