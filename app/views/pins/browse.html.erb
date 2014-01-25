@@ -15,7 +15,7 @@
           <%= render(:partial => "pin_core", :locals => {:pin => pin})  %>
 
           <br>
-          <div style="float: left">
+          <div style="padding-top:8px; float:left">
             <%= link_to("Pin It", {:action => 'repin', :id => pin.card.id, :desicription => pin.description}, :class => 'btn btn-xs btn-danger') %>
           </div>
           <div style="position:absolute; bottom:5px; right: 5px;">
