@@ -19,7 +19,7 @@ class CardsController < ApplicationController
     @place.get_foursquare_lat_lng
     @place.save
     @card.place = @place
-
+    
     if @card.save
       @pin = Pin.new
       @pin.card_id = @card.id
