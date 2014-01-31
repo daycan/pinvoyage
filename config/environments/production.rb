@@ -15,6 +15,9 @@ Pinvoyage::Application.configure do
   config.action_controller.perform_caching = true
 
   # Configure paperclip to use Amazon S3 services
+  Paperclip::Attachment.default_options[:url] = ':s3_domain_url'
+  Paperclip::Attachment.default_options[:path] = '/:class/:attachment/:id_partition/:style/:filename'
+
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
@@ -22,8 +25,6 @@ Pinvoyage::Application.configure do
       :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
-    :url => ':s3_domain_url'
-    :path => '/:class/:attachment/:id_partition/:style/:filename'
   }
 
 
