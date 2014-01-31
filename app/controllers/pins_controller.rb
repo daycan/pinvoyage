@@ -28,6 +28,15 @@ class PinsController < ApplicationController
   def show
   end
 
+  def map
+    @pins = Pin.where(:user_id => current_user.id)
+    @hash = Gmaps4rails.build_markers(@pins) do |pin, marker|
+      marker.lat pin.card.place.latitude
+      marker.lng pin.card.place.longitude
+      marker.infowindow render_to_string(:partial => "/pins/pin_core", :locals => { :pin => pin})
+    end
+  end
+
 
   # GET /pins/1/edit
   def edit

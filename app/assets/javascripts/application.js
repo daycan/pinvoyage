@@ -15,6 +15,8 @@
 //= require twitter/bootstrap
 //= require_tree .
 //= require cards
+//= require underscore
+//= require gmaps/google
 //= require masonry/jquery.masonry
 //= require masonry/jquery.event-drag
 //= require masonry/jquery.imagesloaded.min

@@ -40,8 +40,9 @@ gem "aws-sdk"
 # image resizing
 gem "rmagick", "~> 2.13.2", :require => 'RMagick'
 
-# to help with geocoding
+# to help with geocoding & Maps
 gem "foursquare2", "~> 1.9.8"
+gem 'gmaps4rails'
 #gem 'geocoder'
 
 # to help authorize with services like FourSquare and Facebook
@@ -50,7 +51,7 @@ gem "oauth2", "~> 0.9.2"
 gem "acts_as_list", "~> 0.3.0"
 
 # Use CoffeeScript for .js.coffee assets and views
-#gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby

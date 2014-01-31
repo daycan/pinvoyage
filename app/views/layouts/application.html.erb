@@ -54,7 +54,7 @@
               <ul class="nav">
                 <li><%= link_to "My Pins", :controller => "pins", :action => "index" %></li>
                 <li><%= link_to "Browse Pins", :controller => "pins", :action => "browse" %></li>
-                <li><%= link_to "Map", "#" %></li>
+                <li><%= link_to "Map", :controller => "pins", :action => "map" %></li>
                 <li><%= link_to "Places", :controller => "places" %></li>
                 <li><%= link_to "Add Pin", :controller => "cards", :action => "new" %></li>
               </ul>
