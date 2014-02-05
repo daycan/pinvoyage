@@ -48,6 +48,9 @@ gem 'gmaps4rails'
 # to help authorize with services like FourSquare and Facebook
 gem "oauth2", "~> 0.9.2"
 
+# helps create queries with != requirement
+gem "squeel"
+
 gem "acts_as_list", "~> 0.3.0"
 
 # Use CoffeeScript for .js.coffee assets and views

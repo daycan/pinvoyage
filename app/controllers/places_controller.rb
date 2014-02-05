@@ -21,16 +21,7 @@ class PlacesController < ApplicationController
     if @place.save 
       @card.place_id = @place.id
       @card.save 
-      #@card = Card.new(card_params)
-      #@card.place_id = @place.id
-      #@card.card_image = params[:card_image]
-      #@card.save
       flash[:notice] = "'#{@place.name}' created successfully."
-      #@card.place_id = @place.id
-      #@card.save
-      #@pin.card_id = @card.id
-      #@pin.user_id = session[:user_id]
-      #@pin.save
       redirect_to(:controller => 'cards', :action => 'index')
     else
       # If save, fails, redisplay the form so the user can fix problems
