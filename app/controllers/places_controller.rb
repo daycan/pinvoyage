@@ -39,6 +39,8 @@ class PlacesController < ApplicationController
   def update
     # Find an existing object using form paramters
     @place = Place.find(params[:id])
+    @place.get_foursquare_lat_lng
+    @place.save
     # Update the object
     if @place.update_attributes(place_params)
       flash[:notice] = "'#{@place.name}' updated successfully."
@@ -58,7 +60,6 @@ class PlacesController < ApplicationController
     flash[:notice] = "'#{place.name}' destroyed successfully."
     redirect_to(:action => 'index')
   end
-
 
   private
 

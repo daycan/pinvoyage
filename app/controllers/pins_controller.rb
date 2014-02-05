@@ -31,11 +31,9 @@ class PinsController < ApplicationController
   def map
     @pins = Pin.where(:user_id => current_user.id)
     @hash = Gmaps4rails.build_markers(@pins) do |pin, marker|
-      if pin.card.place.latitude != nil
-        marker.lat pin.card.place.latitude
-        marker.lng pin.card.place.longitude
-        marker.infowindow render_to_string(:partial => "/pins/pin_core", :locals => { :pin => pin})
-      end
+      marker.lat pin.card.place.latitude
+      marker.lng pin.card.place.longitude
+      marker.infowindow render_to_string(:partial => "/pins/pin_core", :locals => { :pin => pin})
     end
   end
 
