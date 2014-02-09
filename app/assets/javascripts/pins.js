@@ -28,6 +28,14 @@ jQuery(document).ready(function () {
             },
             // trigger Masonry as a callback
             function( newElements ) {
+
+              // get new #page-nav
+              var nexPageNav = $(this).find('#page-nav');
+
+              // substitute current #page-nav with new #page-nav from page loaded
+              $('#page-nav').replaceWith(nexPageNav);
+
+
               // hide new items while they are loading
               var $newElems = $( newElements ).css({ opacity: 0 });
               // ensure that images load before adding to masonry layout
