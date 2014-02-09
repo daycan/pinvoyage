@@ -5,4 +5,6 @@ class Pin < ActiveRecord::Base
 
 	acts_as_list :scope => :user
 
+	paginates_per 25
+
 end

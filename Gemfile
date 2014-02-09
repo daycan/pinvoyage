@@ -29,7 +29,7 @@ gem "font-awesome-sass-rails", "~> 3.0.2.2"
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 # enables pagination--attempting to use in conjunction with masonry infinite scroll
-gem 'will_paginate', '~> 3.0'
+gem 'kaminari'
 
 # lazy load images for infinite scroll
 # gem 'jquery-lazy-images'
