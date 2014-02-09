@@ -90,5 +90,7 @@
       </div> <!-- /container -->
     </div>
 
+    <%= render :partial => ‘layouts/google_analytics’ if RAILS_ENV == ‘production’ %>
+
   </body>
 </html>

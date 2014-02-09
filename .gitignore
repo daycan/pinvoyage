@@ -18,7 +18,5 @@
 # Ignore public images
 /public/system/cards/*
 
-
-
 # Ignore application configuration
 /config/application.yml
