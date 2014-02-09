@@ -25,14 +25,20 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 gem 'masonry-rails'
 gem "font-awesome-sass-rails", "~> 3.0.2.2"
 
+# for uploading files in forms
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+
+# enables pagination--attempting to use in conjunction with masonry infinite scroll
+gem 'will_paginate', '~> 3.0'
+
+# lazy load images for infinite scroll
+# gem 'jquery-lazy-images'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-
-# for uploading files in forms
-gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 # for managing pin-images
 gem "aws-sdk"

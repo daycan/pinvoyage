@@ -7,11 +7,12 @@ class PinsController < ApplicationController
   # GET /pins
   # GET /pins.json
   def index
-    @pins = Pin.where(:user_id => current_user.id)
+    # @pins = Pin.where(:user_id => current_user.id)
+    @pins = Pin.where(:user_id => current_user.id).paginate(:page => params[:page], :per_page => 8, :order => 'created_at DESC')
   end
 
   def browse
-    @pins = Pin.where('user_id != ?', current_user.id)
+    @pins = Pin.where('user_id != ?', current_user.id).paginate(:page => params[:page], :per_page => 8, :order => 'created_at DESC')
   end
 
   def repin

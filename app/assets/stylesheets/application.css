@@ -11,6 +11,8 @@
  *= require_self
  *= require_tree .
  *= require 'masonry/centered'
+ *= require 'masonry/fluid'
+ *= require 'masonry/infinitescroll'
  */
 
 /* Errors */
