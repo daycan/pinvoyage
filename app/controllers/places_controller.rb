@@ -2,16 +2,8 @@ class PlacesController < ApplicationController
   
   layout 'application'
 
-  def index
-    @places = Place.sorted
-  end
-
   def show
     @place = Place.find(params[:id])
-  end
-
-  def new
-    @place = Place.new
   end
 
   def create
