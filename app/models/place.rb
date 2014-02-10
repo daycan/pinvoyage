@@ -3,7 +3,8 @@ class Place < ActiveRecord::Base
 	has_many :cards
 	accepts_nested_attributes_for :cards
 	
-	#validates_presence_of :country
+	validates_presence_of :city
+	validates_presence_of :country
 	validates_length_of :name, :maximum => 50
 	validates_length_of :city, :maximum => 40
 	validates_length_of :country, :maximum => 40

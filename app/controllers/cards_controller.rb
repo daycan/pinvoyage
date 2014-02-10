@@ -15,7 +15,7 @@ class CardsController < ApplicationController
 
   def create
     @card = Card.new(card_params)
-    @place = Place.new(place_params)
+    @place = Place.where(place_params).first_or_create
     @place.get_foursquare_lat_lng
     @place.save
     @card.place = @place
