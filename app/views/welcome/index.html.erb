@@ -1,0 +1,822 @@
+
+
+		<!-- STYLESWITCHER -->
+		<div id="switcher">
+			<div class="content-switcher" >        
+				<h4>STYLE OPTIONS</h4>
+
+				<p>Color Skin:</p>
+				<ul style="width:150px;">            
+					<li><a href="#" onclick="setActiveStyleSheet('blue'); return false;" class="color" style="background-color:#50657B"></a></li><!-- default -->
+					<li><a href="#" onclick="setActiveStyleSheet('orange'); return false;" class="color" style="background-color:#F07057"></a></li>
+					<li><a href="#" onclick="setActiveStyleSheet('green'); return false;" class="color" style="background-color:#7E8344"></a></li>
+					<li><a href="#" onclick="setActiveStyleSheet('red'); return false;" class="color" style="background-color:#e93735"></a></li>
+					<li><a href="#" onclick="setActiveStyleSheet('pink'); return false;" class="color" style="background-color:#f73f69"></a></li>
+					<li><a href="#" onclick="setActiveStyleSheet('mauve'); return false;" class="color" style="background-color:#c91ac9"></a></li>
+					<li><a href="#" onclick="setActiveStyleSheet('yellow'); return false;" class="color" style="background-color:#f1c40f"></a></li>
+					<li><a href="#" onclick="setActiveStyleSheet('gray'); return false;" class="color" style="background-color:#333333"></a></li>
+				</ul>        
+
+				<p>Home Page Template:</p>
+				<div class="styled-select">
+					<select onchange="window.document.location.href=this.options[this.selectedIndex].value;">  
+						
+						<optgroup label="+ Personal">
+							<option value="index-personal-full.html">01. Fullscreen Slider</option>
+							<option value="index-personal-half.html">02. Halfscreen Slider</option>
+							<option value="index-personal-half.html">03. Full Video</option>
+						</optgroup>
+
+						<optgroup label="+ Agency">
+							<option value="index-agency-full.html">01. Fullscreen Slider</option>
+							<option selected="selected">02. Halfscreen Slider</option>
+							<option value="index-agency-video.html">03. Full Video</option>
+						</optgroup>
+
+						<optgroup label="+ Application">
+							<option value="index-application-full.html">01. Fullscreen Slider</option>
+							<option value="index-application-half.html">02. Halfscreen Slider</option>
+							<option value="index-application-video.html">03. Full Video</option>
+						</optgroup>
+
+						<optgroup label="Misc">
+							<option value="countdown-image.html">Count Down - Image</option>
+							<option value="countdown-video.html">Count Down - Video</option>
+							<option value="index-video-full.html">404 Not Found</option>
+							<option value="faq.html">Faq Page</option>
+							<option value="text-page.html">Default Text Page</option>
+						</optgroup>
+
+					</select>
+				</div>
+
+				<div class="switcher-links">
+					<a href="elements.html">elements.html</a>
+					<a href="typography.html">typography.html</a>
+					<a href="icons-fontawsome.html">icons-fontawsome.html</a>
+					<a href="icons-linecons.html">icons-linecons.html</a>
+				</div>
+
+				<div id="hideSwitcher">&times;</div>
+			</div>
+		</div>
+		<div id="showSwitcher"><i class="fa fa-tint"></i></div>
+		<!-- /STYLESWITCHER -->
+
+
+		<!-- HOME -->
+		<section id="home" class="half-screen"><!-- full-screen or half-screen (550px height) -->
+
+			<div id="slider">
+
+				<!-- slider navigation -->
+				<nav class="slides-navigation">
+					<a class="prev" href="#"></a>
+					<a class="next" href="#"></a>
+				</nav>
+
+				<ul class="slides-container">
+
+					<!-- Item 1 -->
+					<li>
+						<div class="image-caption">
+							<hr /><hr />
+							<div class="inner">
+								<h2 class="bigtext strtoupper nomargin">Let's work together</h2>
+								<p>WE ARE <strong>ISIS ONE</strong> AGENCY</p>
+							</div>
+							<hr /><hr />
+						</div>
+
+						<span class="overlay"></span>
+						<div style="background-image: url('assets/images/preview/slider/background.jpg');" class="fullscreen-img"></div>
+					</li>
+
+					<!-- Item 2 -->
+					<li>
+						<div class="image-caption">
+							<hr /><hr />
+							<div class="inner">
+								<h1 class="bigtext strtoupper nomargin">ONE PAGE DESIGN</h1>
+								<p>THE TEMPLATE IS EASY TO SET UP</p>
+							</div>
+							<hr /><hr />
+						</div>
+
+						<!--<span class="overlay"></span>-->
+						<div style="background-image: url('assets/images/preview/slider/vision.jpg');" class="fullscreen-img"></div>
+					</li>
+
+
+					<!-- Item 3 -->
+					<li>
+						<div class="image-caption">
+							<hr /><hr />
+							<div class="inner">
+								<h2 class="strtoupper nomargin">RESPONSIVE LAYOUT</h2>
+							</div>
+							<hr /><hr />
+						</div>
+
+						<!--<span class="overlay"></span>-->
+						<div style="background-image: url('assets/images/preview/slider/1.jpg');" class="fullscreen-img"></div>
+					</li>
+
+
+				</ul>
+
+			</div>
+
+		</section>
+		<!-- /HOME -->
+
+
+
+		<!-- Main Nav -->
+		<header id="header">
+
+			<nav class="navbar navbar-inverse" role="navigation"><!-- add "wihite" class for white nav bar -->
+				<div class="container">
+
+					<!-- Mobile Menu Button -->
+					<button id="mobileMenu" class="fa fa-bars" type="button" data-toggle="collapse" data-target=".navbar-collapse"></button>
+
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<a class="navbar-brand scrollTo" href="#home">
+							<img src="assets/images/logo/100x100/white.png" alt="" width="50" height="50" /> 
+							<!--
+								Span class:
+									- dark
+									- white
+									- styleColor (if you select "green" style color, the color will be green).
+
+									You can combine them 
+									Example:
+										<span class="white">ISIS</span><span class="styleColor">ONE</span>
+							-->
+							<span class="">ISIS ONE</span>
+						</a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+						<!-- Fullscreen Button - Unavailable for IE -->
+						<a href="#" class="btn-fullscreen"><i class="fa fa-external-link"></i></a>
+
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#home" class="scrollTo">Home</a></li>
+							<li><a href="#about" class="scrollTo">About</a></li>
+							<li><a href="#work" class="scrollTo">Work</a></li>
+							<li><a href="#services" class="scrollTo">Services</a></li>
+							<li><a href="blog.html">Blog</a></li>
+							<li><a href="faq.html">FAQ</a></li>
+							<li><a href="#contact" class="scrollTo">Contact</a></li>
+						</ul>
+					</div><!-- /.navbar-collapse -->
+
+				</div>
+			</nav>
+
+		</header>
+		<!-- /Main Nav -->
+
+
+
+
+
+
+		<!-- ABOUT -->
+		<section id="about">
+			<div class="container">
+				<header class="text-center">
+					<h1>ABOUT US</h1>
+				</header>
+
+				<div class="divider"><!-- lines divider --></div>
+
+				<article class="text-center big-paragraph">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.</p>
+				</article>
+
+				<div class="me-picture text-center animate_fade_in">
+
+					<!-- ITEM -->
+					<div class="item">
+
+						<!-- social icons -->
+						<span class="socials animated bounceIn">
+							<a target="_blank" href="#" class="social fa fa-facebook"></a>
+							<a target="_blank" href="#" class="social fa fa-twitter"></a>
+							<a target="_blank" href="#" class="social fa fa-google-plus"></a>
+						</span>
+
+						<!-- image -->
+						<img class="img-responsive" src="assets/images/preview/content/people/1.jpg" width="200" height="200" alt="" />
+
+						<!-- name -->
+						<div class="member-name">
+							<h3>
+								Jenny Doe
+								<small>MARKETING</small>
+							</h3>
+						</div>
+
+					</div>
+					<!-- /ITEM -->
+
+					<!-- ITEM -->
+					<div class="item">
+
+						<!-- social icons -->
+						<span class="socials animated bounceIn">
+							<a target="_blank" href="#" class="social fa fa-facebook"></a>
+							<a target="_blank" href="#" class="social fa fa-twitter"></a>
+							<a target="_blank" href="#" class="social fa fa-google-plus"></a>
+						</span>
+
+						<!-- image -->
+						<img class="img-responsive" src="assets/images/preview/content/people/2.jpg" width="200" height="200" alt="" />
+
+						<!-- name -->
+						<div class="member-name">
+							<h3>
+								Christina Doe
+								<small>CEO</small>
+							</h3>
+						</div>
+
+					</div>
+					<!-- /ITEM -->
+
+					<!-- ITEM -->
+					<div class="item">
+
+						<!-- social icons -->
+						<span class="socials animated bounceIn">
+							<a target="_blank" href="#" class="social fa fa-facebook"></a>
+							<a target="_blank" href="#" class="social fa fa-twitter"></a>
+							<a target="_blank" href="#" class="social fa fa-google-plus"></a>
+						</span>
+
+						<!-- image -->
+						<img class="img-responsive" src="assets/images/preview/content/people/3.jpg" width="200" height="200" alt="" />
+
+						<!-- name -->
+						<div class="member-name">
+							<h3>
+								John Doe
+								<small>DIRECTOR</small>
+							</h3>
+						</div>
+
+					</div>
+					<!-- /ITEM -->
+
+				</div>
+
+
+				<article>
+					<div class="row text-left">
+
+						<!-- Passion -->
+						<div class="col-md-4">
+							<h3>Passion</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis.</p>
+						</div>
+
+
+						<!-- Precision -->
+						<div class="col-md-4">
+							<h3>Precision</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis.</p>
+						</div>
+
+
+						<!-- Simplicity -->
+						<div class="col-md-4">
+							<h3>Simplicity</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis.</p>
+						</div>
+
+					</div>
+				</article>
+
+				<!-- curriculum vitae button  -->
+				<!--
+					<article class="curriculum-vitae text-center">
+						<a href="#" class="plusNav">+</a> 
+						<p>curriculum vitae</p>
+					</article>
+				-->
+
+			</div>
+		</section>
+		<!-- /ABOUT -->
+
+
+
+
+
+
+
+		<!-- WORK -->
+		<section id="work" class="alternate arrow-down">
+			<div class="container">
+				<header class="text-center">
+					<h1>OUR WORK</h1>
+				</header>
+
+				<div class="divider"><!-- lines divider --></div>
+
+				<article>
+					<p>
+						Bacon ipsum dolor sit amet meatball shank pork chop capicola fatback pork loin sirloin flank. Andouille tongue corned beef rump pork loin shank meatball capicola turducken venison shankle kevin pancetta tri-tip boudin. Bacon ipsum dolor sit amet meatball shank pork chop capicola fatback pork loin sirloin flank.
+					</p>
+				</article>
+
+				<div id="portfolio" class="text-center animate_fade_in">
+
+					<!-- PORTFOLIO FILTER -->
+					<div class="text-center">
+						<ul class="nav nav-tabs bstrap-tabs">
+							<li class="active"><a href="#all" data-toggle="tab">ALL</a></li>
+							<li><a href="#image" data-toggle="tab">IMAGES</a></li>
+							<li><a href="#brand" data-toggle="tab">BRANDING</a></li>
+							<li><a href="#video" data-toggle="tab">VIDEO</a></li>
+						</ul>
+					</div>
+					<!-- /PORTFOLIO FILTER -->
+
+
+					<div class="item image">
+						<a class="popup-image" href="assets/images/preview/slider/1.jpg">
+							<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/360x360/#676767:#555555/auto/" alt="img" />
+							<div class="caption">
+								<i class="rounded fa fa-camera"></i>
+								<h3>PROJECT TITLE</h3>
+								<p>Image Popup</p>
+							</div>
+						</a>
+					</div>
+					<div class="item video">
+						<a class="popup-video" href="http://www.youtube.com/watch?v=kh29_SERH0Y?rel=0">
+							<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/360x360/#676767:#555555/auto/" alt="img" />
+							<div class="caption">
+								<i class="rounded fa fa-film"></i>
+								<h3>PROJECT TITLE</h3>
+								<p>Youtube Video</p>
+							</div>
+						</a>
+					</div>
+					<div class="item video brand">
+						<a class="popup-video" href="http://vimeo.com/23630702">
+							<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/360x360/#676767:#555555/auto/" alt="img" />
+							<div class="caption">
+								<i class="rounded fa fa-film"></i>
+								<h3>PROJECT TITLE</h3>
+								<p>Vimeo Video</p>
+							</div>
+						</a>
+					</div>
+
+					<div class="item brand">
+						<a class="external ajax-project" href="project-external-1.html">
+							<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/360x360/#676767:#555555/auto/" alt="img" />
+							<div class="caption">
+								<i class="rounded fa fa-link"></i>
+								<h3>PROJECT TITLE</h3>
+								<p>External Project 1</p>
+							</div>
+						</a>
+					</div>
+					<div class="item brand">
+						<a class="external ajax-project" href="project-external-2.html">
+							<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/360x360/#676767:#555555/auto/" alt="img" />
+							<div class="caption">
+								<i class="rounded fa fa-link"></i>
+								<h3>PROJECT TITLE</h3>
+								<p>External Project 2</p>
+							</div>
+						</a>
+					</div>
+					<div class="item brand">
+						<a class="external ajax-project" href="project-external-3.html">
+							<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/360x360/#676767:#555555/auto/" alt="img" />
+							<div class="caption">
+								<i class="rounded fa fa-link"></i>
+								<h3>PROJECT TITLE</h3>
+								<p>External Project 3</p>
+							</div>
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- /WORK -->
+
+		<!-- CALL NOW -->
+		<section class="util-row">
+			<div class="container text-center">
+
+				<header data-animation="bounceIn">
+					<h1 class="no-text-transform italic">Only one step to work together</h1>
+				</header>
+
+				<article class="text-center">
+					<h2>1-800-555-12345</h2>
+					<p>CALL ME NOW - or - <a href="#contact" class="scrollTo">MESSAGE ME</a></p>
+				</article>
+
+			</div>
+		</section>
+		<!-- CALL NOW -->
+
+
+
+		<!-- SERVICES -->
+		<section id="services">
+
+			<header class="text-center">
+				<h1>SERVICES</h1>
+			</header>
+
+			<div class="divider"><!-- lines divider --></div>
+
+			<div class="inner-cover" style="background-image:url('assets/images/preview/slider/3.jpg')">
+
+				<!--
+					Optional - raster or overlay backgrounds, for brighten images.
+					<span class="raster"></span>
+
+					Default overlay: black, opacity 0.5
+					Gray overlay: #212121 , opacity 0.9
+					Remove 'gray' class for default overlay
+
+					<span class="overlay gray"></span>
+				-->
+				<span class="overlay gray"></span>
+
+
+				<div class="container text-center">
+
+					<ul class="services animate_from_bottom">
+						<li><!-- service 1 -->
+							<a href="#service-1" class="service yellow scrollTo">
+								<i class="icon-globe"></i>
+								<h3>Corporate Identity</h3>
+							</a>
+						</li>
+
+						<li><!-- service 2 -->
+							<a href="#service-2" class="service orange scrollTo">
+								<i class="icon-eye"></i>
+								<h3>Graphic Design</h3>
+							</a>
+						</li>
+
+						<li><!-- service 3 -->
+							<a href="#service-3" class="service mauve scrollTo">
+								<i class="fa fa-code"></i>
+								<h3>Development</h3>
+							</a>
+						</li>
+
+						<li><!-- service 4 -->
+							<a href="#service-4" class="service green scrollTo">
+								<i class="icon-videocam"></i>
+								<h3>Video</h3>
+							</a>
+						</li>
+
+						<li><!-- service default -->
+							<a href="#service-4" class="service scrollTo">
+								<i class="fa fa-smile-o"></i>
+								<h3>Default</h3>
+							</a>
+						</li>
+					</ul>
+
+					<div class="services-nav">
+						<a id="service-prev" href="#"><i class="fa fa-chevron-left"></i></a>
+						<a id="service-next" href="#"><i class="fa fa-chevron-right"></i></a>
+					</div>
+
+				</div>
+			</div>
+
+
+			<!--
+				BOOTSTRAP GRID USED
+				http://getbootstrap.com/css/#grid
+			-->
+
+			<!-- service 1 -->
+			<article id="service-1" class="container service-desc animate_fade_in">
+				<div class="row">
+					<div class="col-xs-12 col-md-3 text-left">
+						<h3><i class="yellow fa fa-stop"></i> Corporate Identity</h3>
+					</div>
+					<div class="col-xs-6 col-md-3 text-left">
+						<ul>
+							<li>Naming</li>
+							<li>Logo design</li>
+							<li>Brandbooks</li>
+						</ul>
+					</div>
+					<div class="col-xs-6 col-md-6 text-left">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.</p>
+					</div>
+				</div>
+			</article>
+
+			<!-- service 2 -->
+			<article id="service-2" class="container service-desc animate_fade_in">
+				<div class="row">
+					<div class="col-xs-12 col-md-3 text-left">
+						<h3><i class="orange fa fa-stop"></i> Graphic Design</h3>
+					</div>
+					<div class="col-xs-6 col-md-6 text-left">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.</p>
+					</div>
+					<div class="col-xs-6 col-md-3 text-right">
+						<ul>
+							<li>2D &amp; 3D Animation</li>
+							<li>TV Spots</li>
+							<li>Corporate videos</li>
+						</ul>
+					</div>
+				</div>
+			</article>
+
+			<!-- service 3 -->
+			<article id="service-3" class="container service-desc animate_fade_in">
+				<div class="row">
+					<div class="col-xs-12 col-md-3 text-left">
+						<h3><i class="mauve fa fa-stop"></i> Development</h3>
+					</div>
+					<div class="col-xs-12 col-md-9 text-left">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis.</p>
+					</div>
+				</div>
+			</article>
+
+			<!-- service 4 -->
+			<article id="service-4" class="container service-desc animate_fade_in">
+				<div class="row">
+					<div class="col-xs-12 col-md-3 text-left">
+						<h3><i class="green fa fa-stop"></i> Video</h3>
+					</div>
+					<div class="col-xs-6 col-md-3 text-left">
+						<ul>
+							<li>2D &amp; 3D Animation</li>
+							<li>TV Spots</li>
+							<li>Corporate videos</li>
+						</ul>
+					</div>
+					<div class="col-xs-4 col-md-3 text-left">
+						<ul>
+							<li>Adverts</li>
+							<li>Packaging design</li>
+							<li>Stands &amp; Rollups</li>
+						</ul>
+					</div>
+					<div class="col-xs-4 col-md-3 text-left">
+						<ul>
+							<li>Adverts</li>
+							<li>Packaging design</li>
+							<li>Stands &amp; Rollups</li>
+						</ul>
+					</div>
+				</div>
+			</article>
+
+		</section>
+		<!-- SERVICES -->
+
+
+
+		<!-- OUR PROCESS -->
+		<section id="process" class="alternate arrow-down">
+			<div class="container">
+
+				<header class="text-center animate_fade_in">
+					<h1>Our Process</h1>
+					<p>WE FIND SIMPLE SOLUTIONS TO COMPLEX PROBLEMS</p>
+				</header>
+
+				<div class="divider"><!-- lines divider --></div>
+
+				<article class="animate_fade_in">
+
+					<!-- Nav tabs [steps style] -->
+					<div class="text-center">
+						<ul class="nav nav-tabs bstrap-tabs">
+							<li class="active"><a href="#step1" data-toggle="tab"><i class="icon-calendar"></i>ANALYSIS</a></li>
+							<li><a href="#step2" data-toggle="tab"><i class="icon-pencil"></i>PLANNING</a></li>
+							<li><a href="#step3" data-toggle="tab"><i class="icon-beaker"></i>DEVELOPMENT</a></li>
+							<li><a href="#step4" data-toggle="tab"><i class="icon-thumbs-up"></i>DELIVERY</a></li>
+						</ul>
+					</div>
+
+					<!-- Tab panes [steps style] -->
+					<div class="tab-content bstrap-tabs">
+
+						<!-- STEP 1 -->
+						<div class="tab-pane fade in active" id="step1">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. </p>
+							<p>Nam et lacus neque. Sed volutpat ante id mauris laoreet vestibulum. Nam blandit felis non neque cursus aliquet. Morbi vel enim dignissim massa dignissim commodo vitae quis tellus. Nunc non mollis nulla. </p>
+							<p>Sed consectetur elit id mi consectetur bibendum. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis. Aliquam sit amet purus lectus. Maecenas tempor ornare sollicitudin. </p>
+						</div>
+
+						<!-- STEP 2 -->
+						<div class="tab-pane fade" id="step2">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc.  Nam et lacus neque. Sed volutpat ante id mauris laoreet vestibulum. Nam blandit felis non neque cursus aliquet. Morbi vel enim dignissim massa dignissim commodo vitae quis tellus. Nunc non mollis nulla. </p>
+							<p>Nam et lacus neque. Sed volutpat ante id mauris laoreet vestibulum. Nam blandit felis non neque cursus aliquet. Morbi vel enim dignissim massa dignissim commodo vitae quis tellus. Nunc non mollis nulla. Nam et lacus neque. Sed volutpat ante id mauris laoreet vestibulum. Nam blandit felis non neque cursus aliquet. Morbi vel enim dignissim massa dignissim commodo vitae quis tellus. Nunc non mollis nulla. </p>
+							<p>Sed consectetur elit id mi consectetur bibendum. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis. Aliquam sit amet purus lectus. Maecenas tempor ornare sollicitudin.</p>
+						</div>
+
+						<!-- STEP 3 -->
+						<div class="tab-pane fade" id="step3">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. </p>
+							<p>Nam et lacus neque. Sed volutpat ante id mauris laoreet vestibulum. Nam blandit felis non neque cursus aliquet. Morbi vel enim dignissim massa dignissim commodo vitae quis tellus. Nunc non mollis nulla. </p>
+							<p>Sed consectetur elit id mi consectetur bibendum. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis. Aliquam sit amet purus lectus. Maecenas tempor ornare sollicitudin.</p>
+						</div>
+
+						<!-- STEP 4 -->
+						<div class="tab-pane fade" id="step4">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc.  Nam et lacus neque. Sed volutpat ante id mauris laoreet vestibulum. Nam blandit felis non neque cursus aliquet. Morbi vel enim dignissim massa dignissim commodo vitae quis tellus. Nunc non mollis nulla.  Sed consectetur elit id mi consectetur bibendum. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis. Aliquam sit amet purus lectus. Maecenas tempor ornare sollicitudin. </p>
+						</div>
+					</div>
+
+				</article>
+			</div>
+		</section>
+		<!-- /OUR PROCESS -->
+
+
+
+		<!-- QUOTE -->
+		<section class="cover" style="background-image:url('assets/images/preview/slider/clouds.jpg')">
+			<span class="overlay"></span>
+			<div class="container text-center" data-animation="bounceIn">
+				<q>We can't solve problems by using the same kind of thinking we used when we created them.</q>
+				<cite>Albert Einstein</cite>
+			</div>
+		</section>
+		<!-- /QUOTE -->
+
+
+
+		<!-- BLOG -->
+		<section id="quick-blog" class="alternate">
+			<div class="container">
+
+				<header class="text-center">
+					<h1>BLOG</h1>
+					<p>RECENT ENTRIES</p>
+				</header>
+
+				<div class="divider"><!-- lines divider --></div>
+
+				<article>
+					<div class="row animate_fade_in">
+
+						<!-- article -->
+						<div class="col-md-4 quick-hover">
+							<div class="quick-item">
+								<figure class="media-preview"><!-- image -->
+									<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/360x200/#676767:#555555/auto/" alt="img" />
+								</figure>
+
+								<h4>Simple but powerful</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque.</p>
+								<a href="blog-post.html" class="btn btn-xs"><i class="fa fa-sign-out"></i> READ MORE</a>
+							</div>
+						</div>
+
+
+						<!-- article -->
+						<div class="col-md-4 quick-hover">
+							<div class="quick-item">
+								<div class="media-preview"><!-- video -->
+									<iframe src="https://player.vimeo.com/video/24569304?title=0&amp;byline=0&amp;portrait=0" width="360" height="200"></iframe>
+								</div>
+
+								<h4>Easy to customize</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque.</p>
+								<a href="blog-post.html" class="btn btn-xs"><i class="fa fa-sign-out"></i> READ MORE</a>
+							</div>
+						</div>
+
+
+						<!-- article -->
+						<div class="col-md-4 quick-hover">
+							<div class="quick-item">
+								<div class="media-preview"><!-- audio -->
+									<iframe class="fullwidth" height="200" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/97336936&amp;color=7E8344&amp;auto_play=false&amp;show_artwork=false"></iframe>
+								</div>
+
+								<h4>Easy to integrate</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque.</p>
+								<a href="blog-post.html" class="btn btn-xs"><i class="fa fa-sign-out"></i> READ MORE</a>
+							</div>
+						</div>
+
+					</div>
+				</article>
+
+				<div class="divider"><!-- lines divider --></div>
+
+				<article class="text-center" data-animation="bounceIn">
+					<a href="blog.html" class="plusNav" title="more from blog">+</a> 
+				</article>
+
+			</div>
+		</section>
+		<!-- /BLOG -->
+
+
+
+		<!-- CONTACT -->
+		<section id="contact">
+			<div class="container">
+				<header class="text-center">
+					<h1>CONTACT</h1>
+				</header>
+
+				<div class="divider"><!-- lines divider --></div>
+
+				<article>
+					<p class="text-center big-paragraph">
+						Drop us a line or just say <strong><em>Hello!</em></strong>
+						<small class="fsize15 block">
+							Lorem ipsum dolor sit amet, <strong>consectetur adipiscing</strong> elit. <br />
+							Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc.
+						</small>
+					</p>
+				</article>
+
+				<article>
+
+					<!-- Alert -->
+					<div id="_sent_ok_" class="alert alert-success fade in fsize16 hide">
+						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+						<span id="_msg_txt_"><strong>Thank You!</strong> Your message successfully sent!</span>
+					</div>
+
+					<!-- Form -->
+					<form id="contactForm" method="post" action="php/contact.php" class="white block form-inline">
+						<div class="row">
+							<div class="col-md-4"><input required class="fullwidth" type="text" name="contact_name" id="contact_name" value="" placeholder="NAME *" title="Name" /></div>
+							<div class="col-md-4"><input required class="fullwidth" type="email" name="contact_email" id="contact_email" value="" placeholder="EMAIL *" title="Email" /></div>
+							<div class="col-md-4"><input class="fullwidth" type="text" name="contact_subject" id="contact_subject" value="" placeholder="SUBJECT" title="subject" /></div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12"><textarea required class="fullwidth" rows="5" name="contact_comment" id="contact_comment" placeholder="MESSAGE *"></textarea></div>
+							<div class="col-md-12">
+								<input type="hidden" name="captcha" id="captcha" value="" /><!-- hidden field - humans should not see it, only spam bots will see it -->
+								<button id="contact_submit" class="btn btn-default">SEND MESSAGE</button>
+							</div>
+						</div>
+					</form>
+
+				</article>
+
+			</div>
+		</section>
+		<!-- /CONTACT -->
+
+
+
+
+		<!-- GOOGLE MAP -->
+		<section id="googleMap" class="noindicator nomargin nopadding">
+			<div class="container">
+				<address class="animate_fade_in">
+					<strong class="font-dosis fsize20">LET'S GET IN TOUCH</strong>
+					<ul>
+						<li class="address-sprite address">
+							Melbourne<br />
+							PO Box 21132<br />
+							Here Weare St, Melbourne<br />
+							Vivas 2355 Australia<br />
+						</li>
+						<li class="address-sprite phone">
+							Phone: 1-800-565-2390
+						</li>
+						<li class="address-sprite email">
+							support@yourname.com
+						</li>
+					</ul>
+				</address>
+			</div>
+
+			<div id="gmap"></div>
+		</section>
+		<!-- GOOGLE MAP -->
+
+

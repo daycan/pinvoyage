@@ -13,8 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require_tree .
+//= require bootstrap
 //= require cards
+//= require pins
+//= require places
 //= require underscore
 //= require gmaps/google
 //= require masonry/jquery.masonry

@@ -9,11 +9,17 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ *= require bootstrap_and_overrides
+ *= require cards
+ *= require masonry
+ *= require places
  *= require 'masonry/centered'
  *= require 'masonry/fluid'
  *= require 'masonry/infinitescroll'
- */
+ *
+ *These are for the welcome screen
+
+
 
 /* Errors */
 /* .field_with_erors { @extend .has-error; } */

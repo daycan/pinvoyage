@@ -28,7 +28,7 @@ gem "font-awesome-sass-rails", "~> 3.0.2.2"
 # for uploading files in forms
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
-# enables pagination--attempting to use in conjunction with masonry infinite scroll
+# enables pagination--this is used in conjunction with masonry infinite scroll
 gem 'kaminari'
 
 # lazy load images for infinite scroll
