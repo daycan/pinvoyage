@@ -2,7 +2,10 @@ class CardsController < ApplicationController
   
   layout 'application'
 
+  before_action :authenticate_user!
   before_action :find_place
+
+
 
   def show
     @card = Card.find(params[:id])

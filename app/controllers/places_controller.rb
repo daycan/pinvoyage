@@ -2,6 +2,8 @@ class PlacesController < ApplicationController
   
   layout 'application'
 
+  before_action :authenticate_user!
+
   def show
     @place = Place.find(params[:id])
   end
