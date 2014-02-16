@@ -39,7 +39,7 @@
   </head>
   <body>
 
-    <div class="navbar navbar-fluid-top">
+    <div class="navbar navbar-fluid-top navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
           <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
@@ -74,20 +74,19 @@
       </div>
     </div>
 
-    <div class="container-fluid">
-
-      <div class="row-fluid">
+    <div class="container-fluid full-bleed">
         
         <%= bootstrap_flash %>
 
         <%= yield %>
 
-      <footer>
-        <p>&copy; PinVoyage 2014</p>
-      </footer>
+      <div class="container-fluid">
+        <footer>
+          <p>&copy; PinVoyage 2014</p>
+        </footer>
+      </div>
 
-      </div> <!-- /container -->
-    </div>
+    </div> <!-- /container -->
 
     <%= render :partial => 'layouts/google_analytics' if Rails.env == 'production' %>
 

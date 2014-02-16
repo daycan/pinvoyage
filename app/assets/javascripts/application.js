@@ -18,6 +18,7 @@
 //= require pins
 //= require places
 //= require underscore
+//= require parallax
 //= require gmaps/google
 //= require masonry/jquery.masonry
 //= require masonry/jquery.event-drag

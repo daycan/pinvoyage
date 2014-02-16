@@ -5,35 +5,41 @@
   <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 	  <%= devise_error_messages! %>
 
-	  <div><%= f.label :email %><br />
+	  <div><%= f.label :email %>
 	  <%= f.email_field :email, :autofocus => true %></div>
 
-	  <div><%= f.label :password %><br />
+	  <div><%= f.label :password %>
 	  <%= f.password_field :password %></div>
 
-	  <div><%= f.label :password_confirmation %><br />
+	  <div><%= f.label :password_confirmation %>
 	  <%= f.password_field :password_confirmation %></div>
 
 	  <div><%= f.submit "Sign up" %></div>
 	  <%= render "users/shared/links" %>
 	<% end %>
+  <br>
 </div>
 
-<hr>
+
+<div class="bg"></div>
 
 <!-- Example row of columns -->
-<div class="row-fluid">
-  <div class="span4">
-    <h2>Pin Cool Places</h2>
-    <p>Never lose track of the places you want to go. Add your own places, or follow others with great taste. Make sure you'll have cool places no matter where your travels take you.</p>
-  </div>
-  <div class="span4">
-    <h2>Plan Trips</h2>
-    <p>Instead of trying to find great places when you reach your destination, why not travel to places where you've accumulated places to visit. PinVoyage makes it easy.</p>
- </div>
-  <div class="span4">
-    <h2>Let us Organize</h2>
-    <p>Just pin every place that interests you. You don't have to think about organizing. Our maps and search functions will make sure you can find the places you need when planning or trip or on the ground.</p>
+<div class="over-image">
+  <div class="container-fluid">
+    <div class="row-fluid" style="margin-top: 12px, padding: 20px">
+      <div class="span4">
+        <h2>Pin Cool Places</h2>
+        <p>Never lose track of the places you want to go. Add your own places, or follow others with great taste. Make sure you'll have cool places no matter where your travels take you.</p>
+      </div>
+      <div class="span4">
+        <h2>Plan Trips</h2>
+        <p>Instead of trying to find great places when you reach your destination, why not travel to places where you've accumulated places to visit. PinVoyage makes it easy.</p>
+     </div>
+      <div class="span4">
+        <h2>Let us Organize</h2>
+        <p>Just pin every place that interests you. You don't have to think about organizing. Our maps and search functions will make sure you can find the places you need when planning or trip or on the ground.</p>
+      </div>
+    </div>
   </div>
 </div>
 
