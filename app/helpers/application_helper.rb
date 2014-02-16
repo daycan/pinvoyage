@@ -8,6 +8,10 @@ module ApplicationHelper
   	content_for :title, page_title.to_s
 	end
 
+	def is_active(action)       
+    params[:action] == action ? "active" : nil        
+  end
+
 
 	
 end

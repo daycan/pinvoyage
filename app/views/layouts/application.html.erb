@@ -52,10 +52,11 @@
           <div class="container-fluid nav-collapse">
             <% if user_signed_in? %>
               <ul class="nav">
-                <li><%= link_to "My Pins", :controller => "pins", :action => "index" %></li>
-                <li><%= link_to "Browse Pins", :controller => "pins", :action => "browse" %></li>
-                <li><%= link_to "Map", :controller => "pins", :action => "map" %></li>
-                <li><%= link_to "Add Pin", :controller => "cards", :action => "new" %></li>
+
+                <li class="<%=is_active('index')%>"><%= link_to "My Pins", :controller => "pins", :action => "index" %></li>
+                <li class="<%=is_active('browse')%>"><%= link_to "Browse Pins", :controller => "pins", :action => "browse" %></li>
+                <li class="<%=is_active('map')%>"><%= link_to "Map", :controller => "pins", :action => "map" %></li>
+                <li class="<%=is_active('new')%>"><%= link_to "Add Pin", :controller => "cards", :action => "new" %></li>
               </ul>
             <% end %>
             <p class="navbar-text pull-right">
