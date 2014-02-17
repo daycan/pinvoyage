@@ -7,6 +7,14 @@
     <div class="span12 pagination-centered" >
       <%= image_tag('script_logo_noback.png', :size => '223x107', :alt => '<h1>PinVoyage</h1>') %>
       <br><br>
+
+      <%= form_tag pins_path, :class => "form-inline", :method => :get do %>
+        <p>
+          <%= text_field_tag :search, params[:search] %>
+          <%= submit_tag "Search", :class => "btn", :name => nil %>
+        </p>
+      <% end %>
+
       <%= link_to("Add Pin", {:controller => 'cards', :action => 'new'}, :class => 'btn') %>
       <br><br>
 

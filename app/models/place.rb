@@ -8,8 +8,18 @@ class Place < ActiveRecord::Base
 	validates_length_of :name, :maximum => 50
 	validates_length_of :city, :maximum => 40
 	validates_length_of :country, :maximum => 40
-
-
+	
+	searchable do
+    string :name
+    string :location_type
+    string :city
+    string :country
+    string :latitude
+    string :longitude
+    time :created_at
+    time :updated_at
+  end
+	
 	attr_accessor :text
 
 	#sorting 

@@ -8,12 +8,22 @@ class PinsController < ApplicationController
   # GET /pins
   # GET /pins.json
   def index
+    @search = Pin.search do
+      fulltext params[:search]
+      with(:user_id, current_user.id)
+    end
+    @pins = @search.results
     # @pins = Pin.where(:user_id => current_user.id)
-    @pins = Pin.where(:user_id => current_user.id).order('created_at desc').page(params[:page])
+    # @pins = Pin.where(:user_id => current_user.id).order('created_at desc').page(params[:page])
   end
 
   def browse
-    @pins = Pin.where('user_id != ?', current_user.id).order('created_at desc').page(params[:page])
+    @search = Pin.search do
+      fulltext params[:search]
+      without(:user_id, current_user.id)
+    end
+    @pins = @search.results
+    # @pins = Pin.where('user_id != ?', current_user.id).order('created_at desc').page(params[:page])
   end
 
   def repin
