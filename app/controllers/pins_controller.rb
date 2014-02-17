@@ -11,8 +11,10 @@ class PinsController < ApplicationController
     @search = Pin.search do
       fulltext params[:search]
       with(:user_id, current_user.id)
+      paginate :page => 1, :per_page => 25
     end
     @pins = @search.results
+    
     # @pins = Pin.where(:user_id => current_user.id)
     # @pins = Pin.where(:user_id => current_user.id).order('created_at desc').page(params[:page])
   end
