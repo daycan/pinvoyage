@@ -10,11 +10,13 @@
 	<%= label(:place, :location_type, "Type") %>
 	
 		<%= radio_button(:place, :location_type, 'restaurant') %> Restaurant
+		<%= radio_button(:place, :location_type, 'lodgin') %> Lodging
 		<%= radio_button(:place, :location_type, 'bar') %> Bar
 		<%= radio_button(:place, :location_type, 'shop') %> Shop
 		<%= radio_button(:place, :location_type, 'site') %> Site
 		<%= radio_button(:place, :location_type, 'activity') %> Activity
 	</div>
+	<br>
 	<div>
 		<%= label(:place, :city) %>
 		<%= text_field(:place, :city) %>
