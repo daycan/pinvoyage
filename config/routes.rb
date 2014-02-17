@@ -6,7 +6,7 @@ Pinvoyage::Application.routes.draw do
 
   authenticated :user do
     devise_scope :user do
-      root to: "pins#browse", :as => "profile"
+      root to: "pins#index", :as => "profile"
     end
   end
 
