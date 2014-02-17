@@ -20,10 +20,10 @@ class PinsController < ApplicationController
   end
 
   def browse
-    #@search = Pin.search do
-    #  fulltext params[:search]
+    @search = Pin.search do
+      fulltext params[:search]
     #  without(:user_id, current_user.id)
-    #end
+    end
     #@pins = Kaminari.paginate_array(@search.results).page(params[:page]).per(30)
 
     @pins = Pin.where('user_id != ?', current_user.id).order('created_at desc').page(params[:page])
