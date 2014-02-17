@@ -3,4 +3,6 @@
 
 require File.expand_path('../config/application', __FILE__)
 
+require 'sunspot/rails/tasks'
+
 Pinvoyage::Application.load_tasks

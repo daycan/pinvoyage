@@ -16,6 +16,8 @@ class Pin < ActiveRecord::Base
     time    :updated_at
   end
 
+
+
 	def full_street_address
 		[card.text, card.place.name, card.place.city, card.place.country, card.place.location_type].compact.join(', ')
 	end

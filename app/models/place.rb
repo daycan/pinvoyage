@@ -19,6 +19,7 @@ class Place < ActiveRecord::Base
     time :created_at
     time :updated_at
   end
+
 	
 	attr_accessor :text
 
