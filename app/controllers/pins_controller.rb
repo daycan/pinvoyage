@@ -35,7 +35,7 @@ class PinsController < ApplicationController
     @hash = Gmaps4rails.build_markers(@pins) do |pin, marker|
       marker.lat pin.card.place.latitude
       marker.lng pin.card.place.longitude
-      marker.infowindow render_to_string(:partial => "/pins/pin_core", :locals => { :pin => pin})
+      marker.infowindow render_to_string(:partial => "/pins/map_pin_container", :locals => { :pin => pin})
     end
   end
 
