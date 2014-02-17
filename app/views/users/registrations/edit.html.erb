@@ -2,14 +2,13 @@
 <div class="span12 pagination-centered">
   <%= link_to "Back", :back, class: "btn", style: "margin-top: 20px" %>
 
-  <h2>Edit <%= resource_name.to_s.humanize %></h2>
+  <h2>Edit Your Account</h2>
 
   <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
     <%= devise_error_messages! %>
 
-    <%= image_tag current_user.avatar.url(:thumb) %>
-    <p> select a new avatar </p>
-    <%= f.file_field :avatar %>
+    <%= image_tag current_user.avatar.url(:thumb) %><br>
+    <%= f.file_field :avatar %><br>
 
     <div><%= f.label :email %>
     <%= f.email_field :email, :autofocus => true %></div>
@@ -29,7 +28,7 @@
 
     <div class="container jumbotrop" style="color:green; background-color: #eee; width: 440px; padding-top: 14px; padding-bottom: 16px">
 
-      <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br>
+      <div><%= f.label :current_password , "Enter password to confirm changes"%>
       <%= f.password_field :current_password %></div>
 
       <div><%= f.submit "Update", class: "btn btn-large btn-success" %></div>
@@ -37,9 +36,11 @@
   <% end %>
   <%= link_to "Back", :back, class: "btn" %>
 
-  <h3>Cancel my account</h3>
+  <hr>
 
-  <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete , class: "btn btn-danger" %></p>
+  <h2>Cancel your account</h2>
+
+  <p>Unhappy? <%= button_to "Cancel your account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete , class: "btn btn-danger" %></p>
 
 
 </div>
