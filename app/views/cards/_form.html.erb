@@ -9,13 +9,26 @@
 	<div>
 	<%= label(:place, :location_type, "Type") %>
 	
-		<%= radio_button(:place, :location_type, 'restaurant') %> Restaurant
-		<%= radio_button(:place, :location_type, 'lodgin') %> Lodging
-		<%= radio_button(:place, :location_type, 'bar') %> Bar
-		<%= radio_button(:place, :location_type, 'shop') %> Shop
-		<%= radio_button(:place, :location_type, 'site') %> Site
-		<%= radio_button(:place, :location_type, 'activity') %> Activity
+		<%= radio_button(:place, :location_type, 'restaurant', :class => "radio") %> 
+		<%= label(:place, :location_type, "Restaurant", :class => "radio inline") %>
+
+		<%= radio_button(:place, :location_type, 'lodging', :class => "radio") %>
+		<%= label(:place, :location_type, "Lodging", :class => "radio inline") %>
+
+		<%= radio_button(:place, :location_type, 'bar', :class => "radio") %>
+		<%= label(:place, :location_type, "Bar", :class => "radio inline") %>
+
+		<%= radio_button(:place, :location_type, 'shop', :class => "radio") %>
+		<%= label(:place, :location_type, "Shop", :class => "radio inline") %>
+
+		<%= radio_button(:place, :location_type, 'site', :class => "radio") %>
+		<%= label(:place, :location_type, "Site", :class => "radio inline") %>
+
+		<%= radio_button(:place, :location_type, 'activity', :class => "radio") %>
+		<%= label(:place, :location_type, "Activity", :class => "radio inline") %>
 	</div>
+
+
 	<br>
 	<div>
 		<%= label(:place, :city) %>
