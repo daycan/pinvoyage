@@ -1,0 +1,11 @@
+---
+:User:
+  :avatar:
+  - :medium
+  - :mini
+  - :thumb
+:Card:
+  :card_image:
+  - :large
+  - :medium
+  - :thumb

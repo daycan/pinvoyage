@@ -1,4 +1,4 @@
-<%= image_tag pin.card.card_image.url(:medium) %>
+<%= link_to image_tag(pin.card.card_image.url(:medium)), {:action => 'show', :id => pin.id} %>
 <div style="padding-top:9px;">
 	<h4 style="display:inline;"><%= pin.card.place.name %></h4>
 	<p style="display:inline; float:right"><%= pin.card.place.location_type %></p>

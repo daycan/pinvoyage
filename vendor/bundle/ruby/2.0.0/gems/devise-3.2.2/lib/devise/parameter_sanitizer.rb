@@ -1,4 +1,5 @@
 module Devise
+  
   class BaseSanitizer
     attr_reader :params, :resource_name, :resource_class
 

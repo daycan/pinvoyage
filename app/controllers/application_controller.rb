@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
-
+  
   private
 
 	  # Overwriting the sign_out redirect path method
@@ -15,6 +15,14 @@ class ApplicationController < ActionController::Base
 	    home_path = "/users/sign_up"
 	  end
 
+	protected
 
+	  def devise_parameter_sanitizer
+	    if resource_class == User
+	      User::ParameterSanitizer.new(User, :user, params)
+	    else
+	      super # Use the default one
+	    end
+	  end
 
 end

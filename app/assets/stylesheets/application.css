@@ -59,6 +59,12 @@
 	padding: 0px !important;
 }
 
+.mini-avatar {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
 
 
 #photo_attachment_container {

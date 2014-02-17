@@ -1,11 +1,9 @@
 Pinvoyage::Application.routes.draw do
+
+  match ':controller(/:action(/:id))', :via => [:get, :post]
   
   devise_for :views
   devise_for :users
-  #, path: "auth", path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'register', sign_up: 'join' }
-  #root "pins#browse"
-
-  match ':controller(/:action(/:id))', :via => [:get, :post]
 
   authenticated :user do
     devise_scope :user do
@@ -18,6 +16,8 @@ Pinvoyage::Application.routes.draw do
       root to: "devise/registrations#new", :as => "unauthenticated"
     end
   end
+
+  # root "pins#browse"
 
 
   # The priority is based upon order of creation: first created -> highest priority.
