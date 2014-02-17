@@ -4,9 +4,16 @@ Pinvoyage::Application.routes.draw do
   devise_for :views
   devise_for :users
 
+  resources :pins do
+    collection do
+      get 'map'
+      get 'browse'
+    end
+  end
+
   authenticated :user do
     devise_scope :user do
-      root to: "pins#index", :as => "profile"
+      root to: "pins#browse", :as => "profile"
     end
   end
 
@@ -16,12 +23,7 @@ Pinvoyage::Application.routes.draw do
     end
   end
 
-  resources :pins do
-    collection do
-      get 'map'
-      get 'browse'
-    end
-  end
+
 
   resources :cards
 
