@@ -11,10 +11,10 @@ class PinsController < ApplicationController
     @search = Pin.search do
       fulltext params[:search]
       with(:user_id, current_user.id)
-      paginate :page => 1, :per_page => 25
     end
-    @pins = @search.results
-    
+    #@search.results
+    @pins = Kaminari.paginate_array(@search.results).page(params[:page]).per(30)
+
     # @pins = Pin.where(:user_id => current_user.id)
     # @pins = Pin.where(:user_id => current_user.id).order('created_at desc').page(params[:page])
   end
@@ -24,7 +24,7 @@ class PinsController < ApplicationController
       fulltext params[:search]
       without(:user_id, current_user.id)
     end
-    @pins = @search.results
+    @pins = Kaminari.paginate_array(@search.results).page(params[:page]).per(30)
     # @pins = Pin.where('user_id != ?', current_user.id).order('created_at desc').page(params[:page])
   end
 
