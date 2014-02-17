@@ -57,10 +57,10 @@
             <% if user_signed_in? %>
               <ul class="nav">
 
-                <li class="<%=is_active('index')%>"><%= link_to "My Pins", :controller => "pins", :action => "index" %></li>
-                <li class="<%=is_active('browse')%>"><%= link_to "Browse Pins", :controller => "pins", :action => "browse" %></li>
-                <li class="<%=is_active('map')%>"><%= link_to "Map", :controller => "pins", :action => "map" %></li>
-                <li class="<%=is_active('new')%>"><%= link_to "Add Pin", :controller => "cards", :action => "new" %></li>
+                <li class="<%=is_active('index')%>"><%= link_to "My Pins", pins_path %></li>
+                <li class="<%=is_active('browse')%>"><%= link_to "Browse Pins", browse_pins_path %></li>
+                <li class="<%=is_active('map')%>"><%= link_to "Map", map_pins_path %></li>
+                <li class="<%=is_active('new')%>"><%= link_to "Add Pin", new_card_path %></li>
               </ul>
             <% end %>
             <p class="navbar-text pull-right">

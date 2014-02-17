@@ -1,6 +1,5 @@
 Pinvoyage::Application.routes.draw do
 
-  match ':controller(/:action(/:id))', :via => [:get, :post]
   
   devise_for :views
   devise_for :users
@@ -16,6 +15,17 @@ Pinvoyage::Application.routes.draw do
       root to: "devise/registrations#new", :as => "unauthenticated"
     end
   end
+
+  resources :pins do
+    collection do
+      get 'map'
+      get 'browse'
+    end
+  end
+
+  resources :cards
+
+  match ':controller(/:action(/:id))', :via => [:get, :post]
 
   # root "pins#browse"
 
