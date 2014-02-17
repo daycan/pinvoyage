@@ -1,9 +1,9 @@
 production:
   solr:
-    hostname: localhost
+    hostname: www.pinvoyage.com
     port: 8983
     log_level: WARNING
-    path: /solr/production
+    path: http://index.websolr.com/solr/cf9d7471471
     # read_timeout: 2
     # open_timeout: 0.5
 
