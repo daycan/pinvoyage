@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
 
 	has_attached_file :avatar, 
 		:styles => { :medium => "300x300#", :thumb => "100x100#", :mini => "30x30#" }, 
-		:default_url => ActionController::Base.helpers.asset_path('/assets/images/avatar_blank_mini.png')
+		:default_url => ActionController::Base.helpers.asset_path('avatar_blank_mini.png')
 
 
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
