@@ -8,7 +8,7 @@ gem 'rails', '4.0.2'
 
 # Search gems
 gem 'sunspot_rails'
-gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
+
 
 # Gems for production only
 group :production do
@@ -22,6 +22,7 @@ gem "figaro", "~> 0.7.0"
 group :development do
 	gem 'pry'
 	gem 'awesome_print'
+	gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
 end
 
 #formatting, CSS, HTML, etc.
