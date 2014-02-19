@@ -5,6 +5,10 @@ Pinvoyage::Application.routes.draw do
   devise_for :users
 
   resources :pins do
+    member do
+      get 'delete'
+    end
+
     collection do
       get 'map'
       get 'browse'
@@ -22,8 +26,6 @@ Pinvoyage::Application.routes.draw do
       root to: "devise/registrations#new", :as => "unauthenticated"
     end
   end
-
-
 
   resources :cards
 
