@@ -16,6 +16,8 @@
         </p>
       <% end %>
 
+      <%= link_to_next_page @pins, 'Next Page' %>
+
 
       <%= link_to("Add Pin", {:controller => 'cards', :action => 'new'}, :class => 'btn') %>
       <br><br>
@@ -34,9 +36,10 @@
         <% end %>
       </div>
 
-      <nav id="page-nav">
-        <a href="..?locale=en&amp;page=2">
+      <nav id="page-nav">'Next'
+        <%= link_to_next_page @pins, 'Next Page' %>
       </nav>
+
 
     </div>
 

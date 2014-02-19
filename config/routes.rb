@@ -8,7 +8,6 @@ Pinvoyage::Application.routes.draw do
     member do
       get 'delete'
     end
-
     collection do
       get 'map'
       get 'browse'
