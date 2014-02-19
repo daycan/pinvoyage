@@ -8,11 +8,11 @@ class PinsController < ApplicationController
   # GET /pins
   # GET /pins.json
   def index
-    @search = Pin.search do
-      fulltext params[:search]
-      with(:user_id, current_user.id)
-      order_by(:created_at, :desc)
-    end
+    #@search = Pin.search do
+    #  fulltext params[:search]
+    #  with(:user_id, current_user.id)
+    #  order_by(:created_at, :desc)
+    #end
     #@search.results
     # @pins = Kaminari.paginate_array(@search.results).page(params[:page]).per(30)
 
@@ -21,12 +21,12 @@ class PinsController < ApplicationController
   end
 
   def browse
-    @search = Pin.search do
-      fulltext params[:search]
-      without(:user_id, current_user.id)
-      order_by(:created_at, :desc)  
-      paginate(page: params[:page], per_page: 30)
-    end
+    #@search = Pin.search do
+    #  fulltext params[:search]
+    #  without(:user_id, current_user.id)
+    #  order_by(:created_at, :desc)  
+    #  paginate(page: params[:page], per_page: 30)
+    #end
     # @pins = @search.results
     # @pins = Kaminari.paginate_array(@search.results).page(params[:page]).per(30)
 
