@@ -1,9 +1,9 @@
 production:
   solr:
-    hostname: index.websolr.com
+    hostname: us-west-2.websolr.com
     port: 80
     log_level: WARNING
-    path: /solr/cf9d7471471
+    path: /solr/9b9106cd2da
     # read_timeout: 2
     # open_timeout: 0.5
 
