@@ -1,9 +1,9 @@
-production:
-  solr:
-    hostname: index.websolr.com
-    port: 80
-    log_level: WARNING
-    path: /solr/5a95e2d42c6
+#production:
+#  solr:
+#    hostname: index.websolr.com
+#    port: 80
+#    log_level: WARNING
+#    path: /solr/5a95e2d42c6
     # read_timeout: 2
     # open_timeout: 0.5
 
