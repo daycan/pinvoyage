@@ -9,7 +9,6 @@ gem 'rails', '4.0.2'
 # Search gems
 # gem 'sunspot_rails'
 gem 'sunspot_rails'
-gem 'sunspot_with_kaminari'
 
 
 # Gems for production only
