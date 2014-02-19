@@ -7,7 +7,7 @@ gem 'devise'
 gem 'rails', '4.0.2'
 
 # Search gems
-gem 'sunspot_rails', '=2.0'
+gem 'sunspot_rails'
 
 
 # Gems for production only
