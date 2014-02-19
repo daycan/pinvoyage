@@ -18,8 +18,6 @@
       <%= link_to("Add Pin", {:controller => 'cards', :action => 'new'}, :class => 'btn') %>
       <br><br>
 
-      <%= link_to_next_page @pins, 'Next Page' %>
-
       <div id="PinContainer" class="transitions-enabled centered clearfix masonry">
         <% @pins.each do |pin| %>
           <div class="box col4" id="<%= pin.id.to_s %>" style="text-align:left">
@@ -36,7 +34,7 @@
       </div>
 
       <nav id="page-nav">
-        <%= link_to_next_page @pins, 'Next Page' %>
+        <%= link_to_next_page @pins %>
       </nav>
       
     </div>
