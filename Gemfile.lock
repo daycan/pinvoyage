@@ -231,7 +231,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   less-rails
-  libv8 (= 3.16.14.3)
+  libv8 (~> 3.16.14.3)
   masonry-rails
   oauth2 (~> 0.9.2)
   paperclip!
