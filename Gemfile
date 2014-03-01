@@ -70,6 +70,8 @@ gem "acts_as_list", "~> 0.3.0"
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer'
+# Ran in to error where libv8 was missing
+gem "libv8", git: "git://github.com/cowboyd/libv8.git", submodules: true
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
