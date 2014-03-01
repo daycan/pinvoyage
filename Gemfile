@@ -7,7 +7,7 @@ gem 'devise'
 gem 'rails', '4.0.2'
 
 # libv8 was error message of something missing when pushing to Heroku
-gem "libv8"
+# gem "libv8"
 
 # Search gems
 gem 'sunspot_rails'
@@ -72,7 +72,7 @@ gem "acts_as_list", "~> 0.3.0"
 # gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'therubyracer' #, platforms: :ruby
+# gem 'therubyracer' #, platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
