@@ -6,9 +6,6 @@ gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-# libv8 was error message of something missing when pushing to Heroku
-# gem "libv8"
-
 # Search gems
 gem 'sunspot_rails'
 
@@ -33,7 +30,6 @@ gem "less-rails"
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'masonry-rails'
 gem "font-awesome-sass-rails", "~> 3.0.2.2"
-gem "bootstrap-sass"
 
 # for uploading files in forms
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
@@ -73,9 +69,13 @@ gem "acts_as_list", "~> 0.3.0"
 # gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'therubyracer', '0.10.2', :platforms => :ruby
+<<<<<<< HEAD
+gem 'therubyracer', platforms: :ruby
+=======
+gem 'therubyracer', "~> 0.12.1"
 
 #gem "libv8", "~> 3.16.14.3" #x86_64-darwin-12
+>>>>>>> parent of aa3b861... added older version of therubyracer gem
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
