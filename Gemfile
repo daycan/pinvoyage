@@ -73,7 +73,7 @@ gem "acts_as_list", "~> 0.3.0"
 # gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'therubyracer', "~> 0.12.1"
+gem 'therubyracer', '0.10.2', :platforms => :ruby
 
 #gem "libv8", "~> 3.16.14.3" #x86_64-darwin-12
 
