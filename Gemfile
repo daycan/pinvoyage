@@ -33,6 +33,7 @@ gem "less-rails"
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'masonry-rails'
 gem "font-awesome-sass-rails", "~> 3.0.2.2"
+gem "bootstrap-sass"
 
 # for uploading files in forms
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
@@ -72,9 +73,8 @@ gem "acts_as_list", "~> 0.3.0"
 # gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'therubyracer'
+gem 'therubyracer', "~> 0.12.1"
 
-#gem "therubyracer", "~> 0.12.1"
 #gem "libv8", "~> 3.16.14.3" #x86_64-darwin-12
 
 # Use jquery as the JavaScript library
