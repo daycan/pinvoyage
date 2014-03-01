@@ -1,11 +1,4 @@
 GIT
-  remote: git://github.com/cowboyd/libv8.git
-  revision: 9ff2eb02a4c0a187343e68973339b9e64277d70b
-  submodules: true
-  specs:
-    libv8 (3.16.14.3)
-
-GIT
   remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
   revision: f634e07d9c567e8e46abf95355514956121923d5
   specs:
@@ -113,6 +106,7 @@ GEM
     less-rails (2.4.2)
       actionpack (>= 3.1)
       less (~> 2.4.0)
+    libv8 (3.16.14.3)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -138,7 +132,7 @@ GEM
     pg (0.17.1)
     polyamorous (0.6.4)
       activerecord (>= 3.0)
-    polyglot (0.3.4)
+    polyglot (0.3.3)
     pr_geohash (1.0.0)
     pry (0.9.12.4)
       coderay (~> 1.0)
@@ -202,7 +196,7 @@ GEM
       rails (>= 3)
       sunspot (= 2.1.0)
     sunspot_solr (2.1.0)
-    therubyracer (0.12.1)
+    therubyracer (0.12.0)
       libv8 (~> 3.16.14.0)
       ref
     thor (0.18.1)
@@ -237,7 +231,6 @@ DEPENDENCIES
   jquery-rails
   kaminari
   less-rails
-  libv8!
   masonry-rails
   oauth2 (~> 0.9.2)
   paperclip!
