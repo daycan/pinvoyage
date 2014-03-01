@@ -6,6 +6,9 @@ gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
+# libv8 was error message of something missing when pushing to Heroku
+gem "libv8"
+
 # Search gems
 gem 'sunspot_rails'
 
