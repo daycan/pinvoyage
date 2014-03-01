@@ -73,6 +73,7 @@ gem "acts_as_list", "~> 0.3.0"
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer' #, platforms: :ruby
+gem "therubyracer", "~> 0.12.1"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
