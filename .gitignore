@@ -23,3 +23,5 @@
 
 # Ignore indexing files related to Solr search
 /solr/development/data
+
+/vendor/cache
