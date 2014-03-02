@@ -26,11 +26,11 @@ group :development do
 end
 
 #formatting, CSS, HTML, etc.
-#gem "less-rails"
-#gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
-#gem 'masonry-rails'
-#gem "font-awesome-sass-rails", "~> 3.0.2.2"
-
+gem "less-rails"
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'masonry-rails'
+gem "font-awesome-sass-rails", "~> 3.0.2.2"
+gem 'libv8'
 # for uploading files in forms
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
