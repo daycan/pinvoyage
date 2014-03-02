@@ -26,10 +26,10 @@ group :development do
 end
 
 #formatting, CSS, HTML, etc.
-gem "less-rails"
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
-gem 'masonry-rails'
-gem "font-awesome-sass-rails", "~> 3.0.2.2"
+#gem "less-rails"
+#gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+#gem 'masonry-rails'
+#gem "font-awesome-sass-rails", "~> 3.0.2.2"
 
 # for uploading files in forms
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
@@ -41,7 +41,7 @@ gem 'kaminari'
 # gem 'jquery-lazy-images'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+#gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -69,13 +69,7 @@ gem "acts_as_list", "~> 0.3.0"
 # gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-<<<<<<< HEAD
 gem 'therubyracer', platforms: :ruby
-=======
-gem 'therubyracer', "~> 0.12.1"
-
-#gem "libv8", "~> 3.16.14.3" #x86_64-darwin-12
->>>>>>> parent of aa3b861... added older version of therubyracer gem
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
