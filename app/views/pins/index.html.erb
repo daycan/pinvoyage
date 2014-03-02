@@ -1,43 +1,37 @@
 <% title "My Pins" %>
 
-<div class="container-fluid" style="padding-top: 40px">
+<div class="pagination-centered" style="padding-top: 40px" >
+  <%= image_tag('script_logo_noback.png', :size => '223x107', :alt => '<h1>PinVoyage</h1>') %>
+  <br><br>
 
-  <div class="cards index">
+  <%= form_tag pins_path, :class => "form-inline", :method => :get do %>
+    <p>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :class => "btn", :name => nil %>
+    </p>
+  <% end %>
 
-    <div class="span12 pagination-centered" >
-      <%= image_tag('script_logo_noback.png', :size => '223x107', :alt => '<h1>PinVoyage</h1>') %>
-      <br><br>
+  <%= link_to("Add Pin", {:controller => 'cards', :action => 'new'}, :class => 'btn') %>
+  <br><br>
 
-      <%= form_tag pins_path, :class => "form-inline", :method => :get do %>
-        <p>
-          <%= text_field_tag :search, params[:search] %>
-          <%= submit_tag "Search", :class => "btn", :name => nil %>
-        </p>
-      <% end %>
+  <div id="PinContainer" class="transitions-enabled centered clearfix masonry">
+    <% @pins.each do |pin| %>
+      <div class="box col4" id="<%= pin.id.to_s %>" style="text-align:left">
 
-      <%= link_to("Add Pin", {:controller => 'cards', :action => 'new'}, :class => 'btn') %>
-      <br><br>
+        <%= render(:partial => "pin_core", :locals => {:pin => pin})  %>
 
-      <div id="PinContainer" class="transitions-enabled centered clearfix masonry">
-        <% @pins.each do |pin| %>
-          <div class="box col4" id="<%= pin.id.to_s %>" style="text-align:left">
-
-            <%= render(:partial => "pin_core", :locals => {:pin => pin})  %>
-
-            <div style="position:absolute; bottom:5px; right: 5px;">
-              <%= link_to(raw('<i class="icon-eye-open"></i>'), {:action => 'show', :id => pin.id}) %>
-              <%= link_to(raw('<i class="icon-pencil"></i>'), {:action => 'edit', :id => pin.id}) %>
-              <%= link_to(raw('<i class="icon-trash"></i>'), delete_pin_path(pin.id)) %>
-            </div>
-          </div>
-        <% end %>
+        <div style="position:absolute; bottom:5px; right: 5px;">
+          <%= link_to(raw('<i class="icon-eye-open"></i>'), {:action => 'show', :id => pin.id}) %>
+          <%= link_to(raw('<i class="icon-pencil"></i>'), {:action => 'edit', :id => pin.id}) %>
+          <%= link_to(raw('<i class="icon-trash"></i>'), delete_pin_path(pin.id)) %>
+        </div>
       </div>
-
-      <nav id="page-nav">
-        <%= link_to_next_page @pins, '' %>
-      </nav>
-      
-    </div>
-
+    <% end %>
   </div>
+
+  <nav id="page-nav">
+    <%= link_to_next_page @pins, '' %>
+  </nav>
+  
 </div>
+
