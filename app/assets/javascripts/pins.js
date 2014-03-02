@@ -2,10 +2,12 @@ jQuery(document).ready(function () {
   var $container = $('#PinContainer');
   $container.imagesLoaded(function () {
       $container.masonry({
-          //isFitWidth: true,
+          isFitWidth: true,
+          isResizable: true,
           itemSelector:'.box',
+          isFitWidth: true, 
           columnWidth: function( containerWidth ) {
-              return containerWidth / 12;
+              return containerWidth / 36;
           },
           isAnimated:true,
           animationOptions:{
