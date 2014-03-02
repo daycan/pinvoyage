@@ -55,7 +55,6 @@ gem "rmagick", "~> 2.13.2", :require => 'RMagick'
 # to help with geocoding & Maps
 gem "foursquare2", "~> 1.9.8"
 gem 'gmaps4rails'
-gem 'geocomplete_rails'
 #gem 'geocoder'
 
 # to help authorize with services like FourSquare and Facebook

@@ -1,32 +1,51 @@
 <%= bootstrap_flash %>
 <%= error_messages_for(@card) %>
 <%= error_messages_for(@place) %>
+
+<form summary="Card form fields">
 	
-<%= label(:place, :name, "Name of Place") %>
+	<div>
+		<%= label(:place, :name, "Name of Place") %>
+		<%= text_field(:place, :name) %>
+	</div>
+	<div>
+	<%= label(:place, :location_type, "Type") %>
+	
+		<%= radio_button(:place, :location_type, 'restaurant', :class => "radio") %> 
+		<%= label(:place, :location_type, "Restaurant", :class => "radio inline") %>
 
-<%= text_field(:place, :name, :id => "geocomplete") %>
+		<%= radio_button(:place, :location_type, 'lodging', :class => "radio") %>
+		<%= label(:place, :location_type, "Lodging", :class => "radio inline") %>
 
-<input id="find" type="button" value="find" class="btn" />
- 
-<div id="map", style="width:300px; height: 250px"></div>
+		<%= radio_button(:place, :location_type, 'bar', :class => "radio") %>
+		<%= label(:place, :location_type, "Bar", :class => "radio inline") %>
 
-<div>
-	<%= render(:partial => "places/place_types", :locals => {:f => f})  %>
-</div>
+		<%= radio_button(:place, :location_type, 'shop', :class => "radio") %>
+		<%= label(:place, :location_type, "Shop", :class => "radio inline") %>
 
-<br>
-<div>
-	<%= label(:place, :city) %>
-	<%= text_field(:place, :city) %>
-</div>
-<div>
-	<%= label(:place, :country) %>
-	<%= text_field(:place, :country) %>
-</div>
-<div>
-	<%= f.label(:text, "Description") %>
-	<%= f.text_area(:text) %>
-</div>
-<div id="photo_attachment_container">
-   <%= f.file_field :card_image %>
-</div>
+		<%= radio_button(:place, :location_type, 'site', :class => "radio") %>
+		<%= label(:place, :location_type, "Site", :class => "radio inline") %>
+
+		<%= radio_button(:place, :location_type, 'activity', :class => "radio") %>
+		<%= label(:place, :location_type, "Activity", :class => "radio inline") %>
+	</div>
+
+
+	<br>
+	<div>
+		<%= label(:place, :city) %>
+		<%= text_field(:place, :city) %>
+	</div>
+	<div>
+		<%= label(:place, :country) %>
+		<%= text_field(:place, :country) %>
+	</div>
+	<div>
+		<%= f.label(:text, "Description") %>
+		<%= f.text_area(:text) %>
+	</div>
+	<div id="photo_attachment_container">
+	   <%= f.file_field :card_image %>
+	</div>
+
+</table>

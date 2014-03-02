@@ -10,7 +10,6 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require_tree .
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
@@ -21,12 +20,8 @@
 //= require underscore
 //= require parallax
 //= require gmaps/google
-//= require jquery.geocomplete
-//= require jquery.geocomplete.min
-//= require geocomplete
 //= require masonry/jquery.masonry
 //= require masonry/jquery.event-drag
 //= require masonry/jquery.imagesloaded.min
 //= require masonry/jquery.infinitescroll.min
 //= require masonry/modernizr-transitions
-
