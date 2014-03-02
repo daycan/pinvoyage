@@ -1,6 +1,6 @@
 <% if object && object.errors.size > 0 %>
 	<blockquote id="errorExplanation" >
-		<h5><%= pluralize(object.errors.size, "error") %> prohibited this item from being saved</h5>
+		<p><%= pluralize(object.errors.size, "error") %> prohibited this item from being saved</h5>
 		<p>There were problems with the following fields:</p>
 		<table>
 			<% object.errors.full_messages.each do |msg| %>
