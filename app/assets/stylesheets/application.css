@@ -14,7 +14,6 @@
  *= require masonry
  *= require places
  *= require 'masonry/centered'
- *= require 'masonry/fluid'
  *= require 'masonry/infinitescroll'
  *
  *These are for the welcome screen
