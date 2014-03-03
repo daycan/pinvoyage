@@ -2,21 +2,24 @@
 
 <%= link_to('Back', :back, :class => 'btn back-link') %>
 
-<div class="Card new">
+<div class="row-fluid centered">
+	<div class="centered inner">
+		<div class="pagination-centered">
+			<h2>Create a new Card</h2>
 
-	<h2>Create a new Card</h2>
+			<%= form_for(:card, :url => {:action => 'create'}, :id => "geoform", :class => "geo_details" ) do |f| %>
 
-	<%= form_for(:card, :url => {:action => 'create'}) do |f| %>
+				<%= render(:partial => "form", :locals => {:f => f})  %>
 
-		<%= render(:partial => "form", :locals => {:f => f})  %>
+				<div id="photo_attachment_container">
+					<div class="wrapper">
+						<%= submit_tag("Create Pin") %>
+					</div>
+					<button class="btn btn-success">Create Pin</button>
+				</div>
 
-		<div id="photo_attachment_container">
-			<div class="wrapper">
-				<%= submit_tag("Create Pin") %>
-			</div>
-			<button class="btn btn-success">Create Pin</button>
+			<% end %>
 		</div>
-
-	<% end %>
-
+	</div>
 </div>
+

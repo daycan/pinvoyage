@@ -1,6 +1,7 @@
 .box {
   margin: 5px;
-  padding: 5px;
+  padding: 0px;
+  padding-bottom: 5px;
   background: #FBFBFB;
   font-size: 11px;
   line-height: 1.4em;
@@ -20,7 +21,7 @@
 
 .box img {
   width: 100%;
-  border-radius: 2px;
+  border-radius: 0px;
 }
 
 .centered { margin: 0 auto; }

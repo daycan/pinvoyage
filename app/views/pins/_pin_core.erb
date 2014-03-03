@@ -1,8 +1,9 @@
 <%= link_to image_tag(pin.card.card_image.url(:medium)), {:action => 'show', :id => pin.id} %>
-<div style="padding-top:9px;">
+<div style="padding-top:9px; padding-left:5px; padding-right:5px;">
 	<h4 style="display:inline;"><%= pin.card.place.name %></h4>
 	<p style="display:inline; float:right"><%= pin.card.place.location_type %></p>
+
+	<h6 style="margin: 0 0;"><%= pin.card.place.city %>, <%= pin.card.place.country %></h6>
+	<p style="margin: 0 0; display:inline; "><%= pin.card.text %></p>
+	<p style="margin: 0 0; display:inline; "><%= pin.description %></p>
 </div>
-<h6 style="margin: 0 0;"><%= pin.card.place.city %>, <%= pin.card.place.country %></h6>
-<p style="margin: 0 0; display:inline; "><%= pin.card.text %></p>
-<p style="margin: 0 0; display:inline; "><%= pin.description %></p>

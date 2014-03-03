@@ -35,6 +35,9 @@ class Place < ActiveRecord::Base
 		where(["name LIKE ?", "%#{query}%"])
 	}	
 
+	def geodata
+	end
+
 	def full_street_address
 		[name, city, country].compact.join(', ')
 	end

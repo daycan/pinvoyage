@@ -1,51 +1,45 @@
 <%= bootstrap_flash %>
 <%= error_messages_for(@card) %>
-<%= error_messages_for(@place) %>
-
-<form summary="Card form fields">
 	
-	<div>
-		<%= label(:place, :name, "Name of Place") %>
-		<%= text_field(:place, :name) %>
-	</div>
-	<div>
-	<%= label(:place, :location_type, "Type") %>
-	
-		<%= radio_button(:place, :location_type, 'restaurant', :class => "radio") %> 
-		<%= label(:place, :location_type, "Restaurant", :class => "radio inline") %>
+<%= label(:place, :name, "Name of Place") %>
+<%= text_field(:place, :name, :style => "text-align:center") %>
 
-		<%= radio_button(:place, :location_type, 'lodging', :class => "radio") %>
-		<%= label(:place, :location_type, "Lodging", :class => "radio inline") %>
+<label>Location</label>
+<input id="geocomplete" type="text" placeholder="Type in an address" style="text-align:center" /><br>
+<br>
 
-		<%= radio_button(:place, :location_type, 'bar', :class => "radio") %>
-		<%= label(:place, :location_type, "Bar", :class => "radio inline") %>
+<div>
+<%= label(:place, :location_type, "Type") %>
 
-		<%= radio_button(:place, :location_type, 'shop', :class => "radio") %>
-		<%= label(:place, :location_type, "Shop", :class => "radio inline") %>
+	<%= radio_button(:place, :location_type, 'restaurant', :class => "radio") %> 
+	<%= label(:place, :location_type, "Restaurant", :class => "radio inline") %>
 
-		<%= radio_button(:place, :location_type, 'site', :class => "radio") %>
-		<%= label(:place, :location_type, "Site", :class => "radio inline") %>
+	<%= radio_button(:place, :location_type, 'lodging', :class => "radio") %>
+	<%= label(:place, :location_type, "Lodging", :class => "radio inline") %>
 
-		<%= radio_button(:place, :location_type, 'activity', :class => "radio") %>
-		<%= label(:place, :location_type, "Activity", :class => "radio inline") %>
-	</div>
+	<%= radio_button(:place, :location_type, 'bar', :class => "radio") %>
+	<%= label(:place, :location_type, "Bar", :class => "radio inline") %>
 
+	<%= radio_button(:place, :location_type, 'shop', :class => "radio") %>
+	<%= label(:place, :location_type, "Shop", :class => "radio inline") %>
 
-	<br>
-	<div>
-		<%= label(:place, :city) %>
-		<%= text_field(:place, :city) %>
-	</div>
-	<div>
-		<%= label(:place, :country) %>
-		<%= text_field(:place, :country) %>
-	</div>
-	<div>
-		<%= f.label(:text, "Description") %>
-		<%= f.text_area(:text) %>
-	</div>
-	<div id="photo_attachment_container">
-	   <%= f.file_field :card_image %>
-	</div>
+	<%= radio_button(:place, :location_type, 'site', :class => "radio") %>
+	<%= label(:place, :location_type, "Site", :class => "radio inline") %>
 
-</table>
+	<%= radio_button(:place, :location_type, 'activity', :class => "radio") %>
+	<%= label(:place, :location_type, "Activity", :class => "radio inline") %>
+</div>
+<br>
+
+<div id="map_canvas" ></div>
+
+<%= text_field(:place, :city, :geodata => "locality", :type => "hidden", :style => "text-align:center") %><br>
+
+<%= text_field(:place, :country, :geodata => "country", :type => "hidden", :style => "text-align:center") %>
+
+<%= f.label(:text, "Description") %>
+<%= f.text_area(:text, :rows => '3', :style => "width:100%") %>
+
+<div id="photo_attachment_container">
+   <%= f.file_field :card_image %>
+</div>

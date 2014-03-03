@@ -18,4 +18,7 @@ class Card < ActiveRecord::Base
 		where(["text LIKE ?", "%#{query}%"])
 	}	
 
+	def geodata
+	end
+
 end
