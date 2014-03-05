@@ -101,6 +101,10 @@
     </div> <!-- /container -->
 
     <%= render :partial => 'layouts/google_analytics' if Rails.env == 'production' %>
+    
+    <!-- /allow view-specific javascript to be loaded in to the app -->
+    <%= javascript_include_tag "application" %>
+    <%= yield :javascript_includes %>
 
   </body>
 </html>
