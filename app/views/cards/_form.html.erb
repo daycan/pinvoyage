@@ -47,9 +47,14 @@
 <!-- Note: markers are built in the card controller -->
 <script type="text/javascript">
 	handler = Gmaps.build('Google');
-	handler.buildMap({ provider: {}, internal: {id: 'map_canvas'}}, function(){
-	  markers = handler.addMarkers(<%=raw @hash.to_json %>);
-	  handler.bounds.extendWith(markers);
-	  handler.fitMapToBounds();
+	handler.buildMap({ 
+		provider: { 
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+  		styles: gmapOptions 
+  	}, 
+  	internal: {id: 'map_canvas'}}, function(){
+		  markers = handler.addMarkers(<%=raw @hash.to_json %>);
+		  handler.bounds.extendWith(markers);
+		  handler.fitMapToBounds();
 	});
 </script>
