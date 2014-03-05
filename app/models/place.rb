@@ -48,12 +48,13 @@ class Place < ActiveRecord::Base
 
 	def get_foursquare_lat_lng
 		client = Foursquare2::Client.new(:client_id => ENV['FOURSQUARE_CLIENT_ID'], :client_secret => ENV['FOURSQUARE_CLIENT_SECRET'])
-		tempVenue = client.search_venues( :near => self.city_country , :query => self.name , :v => '20140128' )["venues"][0]
+		tempVenue = client.search_venues( :near => self.city_country , :query => self.name , :v => '20140301', :llAcc => '1.0' )["venues"][0]
 
 		self.latitude = tempVenue["location"]["lat"]
 		self.longitude = tempVenue["location"]["lng"]
 		self.service = "foursquare"
 		self.service_id = tempVenue["id"]
+		binding.pry
 	end
 	
 end

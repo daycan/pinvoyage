@@ -17,9 +17,9 @@
 //= require cards
 //= require pins
 //= require places
-//= require underscore
 //= require geocomplete.min
 //= require parallax
+//= require underscore
 //= require gmaps/google
 //= require masonry/jquery.masonry
 //= require masonry/jquery.event-drag
