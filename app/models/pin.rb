@@ -22,5 +22,4 @@ class Pin < ActiveRecord::Base
 		[card.text, card.place.name, card.place.city, card.place.country, card.place.location_type].compact.join(', ')
 	end
 
-
 end
