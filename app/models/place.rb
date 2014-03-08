@@ -54,7 +54,6 @@ class Place < ActiveRecord::Base
 		self.longitude = tempVenue["location"]["lng"]
 		self.service = "foursquare"
 		self.service_id = tempVenue["id"]
-		binding.pry
 	end
 	
 end
