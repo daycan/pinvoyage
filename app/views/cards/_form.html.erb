@@ -1,11 +1,8 @@
 <%= bootstrap_flash %>
 <%= error_messages_for(@card) %>
 	
-<%= label(:place, :name, "Name of Place") %>
-<%= text_field(:place, :name, :style => "text-align:center") %>
-
-<label>Location</label>
-<input id="geocomplete" type="text" placeholder="Address or City" style="text-align:center" /><br>
+<%= text_field(:place, :name, :style => "text-align:center", :placeholder => "Place Name") %>
+<input id="geocomplete" type="text" placeholder="Near: Address or City" style="text-align:center" /><br>
 <br>
 
 <div>
