@@ -7,8 +7,8 @@
 
   <%= render(:partial => "search_header", :locals => {:searchpath => browse_pins_path})  %>
 
-  <%= link_to("Add Pin", {:controller => 'cards', :action => 'new'}, :class => 'btn') %>
-  <br><br>
+  <br>
+  <br>
 
   <div id="PinContainer" class="transitions-enabled centered pagination-centered clearfix masonry">
     <% @pins.each do |pin| %>
