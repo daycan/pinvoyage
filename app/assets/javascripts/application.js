@@ -18,10 +18,10 @@
 //= require pins
 //= require places
 //= require geocomplete.min
+//= require gmap_options
 //= require parallax
 //= require underscore
 //= require gmaps/google
-//= require gmap_options
 //= require masonry/jquery.masonry
 //= require masonry/jquery.event-drag
 //= require masonry/jquery.imagesloaded.min
