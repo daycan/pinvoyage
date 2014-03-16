@@ -27,9 +27,7 @@ end
 
 #formatting, CSS, HTML, etc.
 gem "less-rails"
-gem 'sass-rails', '>= 3.2' # sass-rails needs to be higher than 3.2
-gem 'bootstrap-sass', '~> 3.1.1'
-# gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'masonry-rails'
 # gem "font-awesome-sass-rails", "~> 3.0.2.2"
 gem 'font-awesome-less'

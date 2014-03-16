@@ -9,6 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require bootstrap_and_overrides
  *= require cards
  *= require masonry
  *= require places
@@ -20,8 +21,6 @@
  *These are for the welcome screen
 
 
-@import "bootstrap";
-@import "bootstrap/theme";
 
 /* Errors */
 /* .field_with_erors { @extend .has-error; } */
@@ -89,60 +88,6 @@
 .inner {
   min-width: 320px;
   max-width: 480px;
-}
-
-#map img { 
-  max-width: none;
-}
-#map label { 
-  width: auto; display:inline; 
-}
-
-/* padding for body due to fixed nav-bar */
-body { padding-top: 40px; }
-@media screen and (max-width: 768px) {
-    body { padding-top: 0px; }
-}
-
-h1, h2, h3, h4, h5 {
-  font-family: 'Roboto Slab', sans-serif;
-  font-weight: 400;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  padding-top: 120px;
-  text-align: center;
-  margin-bottom: 0px;
-  color: white;
-  text-shadow: black 0.3em 0.3em 0.3em;
-  top: 0px;
-  background:transparent;
-}
-.jumbotron h1 {
-  font-size: 100px;
-  line-height: 1;
-}
-.jumbotron .lead {
-  font-size: 24px;
-  line-height: 1.25;
-}
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
-}
-
-.radio {
-  padding-left: 4px;
-  padding-right: 12px;
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 60px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
 }
 
 /*
