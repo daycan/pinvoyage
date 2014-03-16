@@ -15,6 +15,7 @@
  *= require places
  *= require 'masonry/centered'
  *= require 'masonry/infinitescroll'
+ *= require font-awesome
  *
  *These are for the welcome screen
 
