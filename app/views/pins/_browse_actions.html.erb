@@ -6,7 +6,7 @@
 	</div>
 	<p style="display:inline"><%= pin.user.username %></p>
 
-	<div style="float:right; display:inline">
+	<div data-toggle="tooltip" data-placement="left" title="Add to my Pins" class="has_tooltip" style="float:right; display:inline">
 	  <%= link_to({:action => 'repin', :id => pin.card.id, :desicription => pin.description}) do %>
 	  	<%= image_tag('AddButton_small.png', :alt => 'Add Pin', :class => 'image_link' ) %>
 	  <% end %>
