@@ -90,6 +90,10 @@
   max-width: 480px;
 }
 
+.image_link {
+  text-decoration:none;
+}
+
 /*
 #photo_attachment_container button {
 }

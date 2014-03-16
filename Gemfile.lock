@@ -225,7 +225,6 @@ DEPENDENCIES
   jquery-rails
   kaminari
   less-rails
-  libv8
   masonry-rails
   oauth2 (~> 0.9.2)
   paperclip!

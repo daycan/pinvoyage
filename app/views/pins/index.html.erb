@@ -4,10 +4,7 @@
   <%= image_tag('script_logo_noback.png', :size => '223x107', :alt => '<h1>PinVoyage</h1>') %>
   <br><br>
 
-  <%= render(:partial => "search_header", :locals => {:searchpath => pins_path})  %>
-
-  <%= link_to("Add Pin", {:controller => 'cards', :action => 'new'}, :class => 'btn') %>
-  <br><br>
+  <%= render(:partial => "header", :locals => {:searchpath => pins_path})  %>
 
   <div id="PinContainer" class="transitions-enabled centered clearfix masonry has-gutters">
     <% @pins.each do |pin| %>
