@@ -5,13 +5,7 @@
   <%= image_tag('script_logo_noback.png', :size => '223x107', :alt => '<h1>PinVoyage</h1>') %>
   <br><br>
 
-
-  <%= form_tag browse_pins_path, :class => "form-inline", :method => :get do %>
-      <%= text_field_tag :search, params[:search] %>
-      <%= button_tag(type: "submit", class: "btn btn-default") do %>
-        <%= icon('search') %>
-      <% end %>  
-  <% end %>
+  <%= render(:partial => "search_header", :locals => {:searchpath => browse_pins_path})  %>
 
   <%= link_to("Add Pin", {:controller => 'cards', :action => 'new'}, :class => 'btn') %>
   <br><br>
