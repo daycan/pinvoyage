@@ -5,7 +5,6 @@ jQuery(document).ready(function () {
           isFitWidth: true,
           isResizable: true,
           itemSelector:'.box',
-          gutterWidth: 12,
           isFitWidth: true, 
           columnWidth: function( containerWidth ) {
               return containerWidth / 36;

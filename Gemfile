@@ -32,7 +32,6 @@ gem 'masonry-rails'
 # gem "font-awesome-sass-rails", "~> 3.0.2.2"
 gem 'font-awesome-less'
 gem 'libv8'
-
 # for uploading files in forms
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
