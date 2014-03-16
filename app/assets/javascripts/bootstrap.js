@@ -1,3 +1,3 @@
-// jQuery ->
-//  $("a[rel~=popover], .has-popover").popover()
-//  $("a[rel~=tooltip], .has-tooltip").tooltip()
+jQuery(document).ready(function () {
+	$('.has_tooltip').tooltip();
+});
