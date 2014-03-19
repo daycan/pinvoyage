@@ -6,7 +6,7 @@ jQuery(document).ready(function () {
           isResizable: true,
           itemSelector:'.box', 
           columnWidth: function( containerWidth ) {
-              return (containerWidth -10) / 36;
+              return containerWidth / 36;
           },
           isAnimated:true,
           animationOptions:{
