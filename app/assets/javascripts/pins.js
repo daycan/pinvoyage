@@ -4,8 +4,7 @@ jQuery(document).ready(function () {
       $container.masonry({
           isFitWidth: true,
           isResizable: true,
-          itemSelector:'.box',
-          isFitWidth: true, 
+          itemSelector:'.box', 
           columnWidth: function( containerWidth ) {
               return containerWidth / 36;
           },
