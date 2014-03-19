@@ -2,8 +2,8 @@ jQuery(document).ready(function () {
   var $container = $('#PinContainer');
   $container.imagesLoaded(function () {
       $container.masonry({
-          isFitWidth: true,
-          isResizable: true,
+          isFitWidth: false,
+          isResizable: false,
           itemSelector:'.box', 
           columnWidth: function( containerWidth ) {
               return containerWidth / 36;
