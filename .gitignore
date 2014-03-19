@@ -25,3 +25,4 @@
 /solr/development/data
 
 /vendor/cache
+/vendor/bundle
