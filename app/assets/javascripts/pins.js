@@ -2,11 +2,11 @@ jQuery(document).ready(function () {
   var $container = $('#PinContainer');
   $container.imagesLoaded(function () {
       $container.masonry({
-          isFitWidth: false,
-          isResizable: false,
+          isFitWidth: true,
+          isResizable: true,
           itemSelector:'.box', 
           columnWidth: function( containerWidth ) {
-              return containerWidth / 36;
+              return (containerWidth -10) / 36;
           },
           isAnimated:true,
           animationOptions:{
