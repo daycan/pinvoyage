@@ -42,7 +42,7 @@ gem 'kaminari'
 # gem 'jquery-lazy-images'
 
 # Use SCSS for stylesheets
-#gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -51,7 +51,7 @@ gem 'uglifier', '>= 1.3.0'
 gem "aws-sdk"
 
 # image resizing
-gem "rmagick", "~> 2.13.2", :require => 'RMagick'
+# gem "rmagick", "~> 2.13.2", :require => 'RMagick'
 
 # to help with geocoding & Maps
 gem "foursquare2", "~> 1.9.8"
@@ -67,7 +67,7 @@ gem "squeel"
 gem "acts_as_list", "~> 0.3.0"
 
 # Use CoffeeScript for .js.coffee assets and views
-# gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
@@ -101,4 +101,4 @@ gem "pg", "~> 0.17.1"
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-ruby "2.0.0"
+ruby "2.1.1"
